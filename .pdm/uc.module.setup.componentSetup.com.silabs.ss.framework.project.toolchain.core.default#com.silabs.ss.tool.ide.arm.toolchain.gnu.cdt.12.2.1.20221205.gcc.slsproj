@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="uc.module.setup.componentSetup.com.silabs.ss.framework.project.toolchain.core.default#com.silabs.ss.tool.ide.arm.toolchain.gnu.cdt:12.2.1.20221205.gcc" propertyScope="project">
   <folder name="image">
-    <file name="readme_img0.png" linked="false" uri="studio:/sdk/app/bluetooth/example/bt_soc_empty/image/readme_img0.png"/>
-    <file name="readme_img1.png" linked="false" uri="studio:/sdk/app/bluetooth/example/bt_soc_empty/image/readme_img1.png"/>
-    <file name="readme_img2.png" linked="false" uri="studio:/sdk/app/bluetooth/example/bt_soc_empty/image/readme_img2.png"/>
-    <file name="readme_img3.png" linked="false" uri="studio:/sdk/app/bluetooth/example/bt_soc_empty/image/readme_img3.png"/>
-    <file name="readme_img4.png" linked="false" uri="studio:/sdk/app/bluetooth/example/bt_soc_empty/image/readme_img4.png"/>
+    <file name="readme_img0.png" linked="false" uri="studio:/project/image/readme_img0.png"/>
+    <file name="readme_img1.png" linked="false" uri="studio:/project/image/readme_img1.png"/>
+    <file name="readme_img2.png" linked="false" uri="studio:/project/image/readme_img2.png"/>
+    <file name="readme_img3.png" linked="false" uri="studio:/project/image/readme_img3.png"/>
+    <file name="readme_img4.png" linked="false" uri="studio:/project/image/readme_img4.png"/>
   </folder>
   <folder name="gecko_sdk_4.4.4">
     <folder name="platform">
@@ -77,11 +77,13 @@
           <file name="sl_gsdk_version.h" uri="studio:/sdk/platform/common/inc/sl_gsdk_version.h"/>
           <file name="sl_assert.h" uri="studio:/sdk/platform/common/inc/sl_assert.h"/>
           <file name="sl_common.h" uri="studio:/sdk/platform/common/inc/sl_common.h"/>
+          <file name="sl_string.h" uri="studio:/sdk/platform/common/inc/sl_string.h"/>
           <file name="sl_slist.h" uri="studio:/sdk/platform/common/inc/sl_slist.h"/>
           <file name="sl_status.h" uri="studio:/sdk/platform/common/inc/sl_status.h"/>
         </folder>
         <folder name="src">
           <file name="sl_assert.c" uri="studio:/sdk/platform/common/src/sl_assert.c"/>
+          <file name="sl_string.c" uri="studio:/sdk/platform/common/src/sl_string.c"/>
           <file name="sl_syscalls.c" uri="studio:/sdk/platform/common/src/sl_syscalls.c"/>
           <file name="sl_slist.c" uri="studio:/sdk/platform/common/src/sl_slist.c"/>
         </folder>
@@ -123,6 +125,24 @@
           </folder>
         </folder>
       </folder>
+      <folder name="driver">
+        <folder name="debug">
+          <folder name="src">
+            <file name="sl_debug_swo.c" uri="studio:/sdk/platform/driver/debug/src/sl_debug_swo.c"/>
+          </folder>
+          <folder name="inc">
+            <file name="sl_debug_swo.h" uri="studio:/sdk/platform/driver/debug/inc/sl_debug_swo.h"/>
+          </folder>
+        </folder>
+        <folder name="i2cspm">
+          <folder name="src">
+            <file name="sl_i2cspm.c" uri="studio:/sdk/platform/driver/i2cspm/src/sl_i2cspm.c"/>
+          </folder>
+          <folder name="inc">
+            <file name="sl_i2cspm.h" uri="studio:/sdk/platform/driver/i2cspm/inc/sl_i2cspm.h"/>
+          </folder>
+        </folder>
+      </folder>
       <folder name="service">
         <folder name="device_init">
           <folder name="inc">
@@ -139,6 +159,22 @@
             <file name="sl_device_init_hfxo_s1.c" uri="studio:/sdk/platform/service/device_init/src/sl_device_init_hfxo_s1.c"/>
             <file name="sl_device_init_lfxo_s1.c" uri="studio:/sdk/platform/service/device_init/src/sl_device_init_lfxo_s1.c"/>
             <file name="sl_device_init_nvic.c" uri="studio:/sdk/platform/service/device_init/src/sl_device_init_nvic.c"/>
+          </folder>
+        </folder>
+        <folder name="iostream">
+          <folder name="src">
+            <file name="sl_iostream.c" uri="studio:/sdk/platform/service/iostream/src/sl_iostream.c"/>
+            <file name="sl_iostream_retarget_stdio.c" uri="studio:/sdk/platform/service/iostream/src/sl_iostream_retarget_stdio.c"/>
+            <file name="sl_iostream_stdlib_config.c" uri="studio:/sdk/platform/service/iostream/src/sl_iostream_stdlib_config.c"/>
+            <file name="sl_iostream_uart.c" uri="studio:/sdk/platform/service/iostream/src/sl_iostream_uart.c"/>
+            <file name="sl_iostream_usart.c" uri="studio:/sdk/platform/service/iostream/src/sl_iostream_usart.c"/>
+          </folder>
+          <folder name="inc">
+            <file name="sl_iostream.h" uri="studio:/sdk/platform/service/iostream/inc/sl_iostream.h"/>
+            <file name="sl_iostream_stdlib_config.h" uri="studio:/sdk/platform/service/iostream/inc/sl_iostream_stdlib_config.h"/>
+            <file name="sl_iostream_uart.h" uri="studio:/sdk/platform/service/iostream/inc/sl_iostream_uart.h"/>
+            <file name="sli_iostream_uart.h" uri="studio:/sdk/platform/service/iostream/inc/sli_iostream_uart.h"/>
+            <file name="sl_iostream_usart.h" uri="studio:/sdk/platform/service/iostream/inc/sl_iostream_usart.h"/>
           </folder>
         </folder>
         <folder name="mpu">
@@ -191,6 +227,21 @@
           </folder>
           <folder name="inc">
             <file name="sl_udelay.h" uri="studio:/sdk/platform/service/udelay/inc/sl_udelay.h"/>
+          </folder>
+        </folder>
+      </folder>
+      <folder name="emdrv">
+        <folder name="dmadrv">
+          <folder name="src">
+            <file name="dmadrv.c" uri="studio:/sdk/platform/emdrv/dmadrv/src/dmadrv.c"/>
+          </folder>
+          <folder name="inc">
+            <file name="dmadrv.h" uri="studio:/sdk/platform/emdrv/dmadrv/inc/dmadrv.h"/>
+          </folder>
+        </folder>
+        <folder name="common">
+          <folder name="inc">
+            <file name="ecode.h" uri="studio:/sdk/platform/emdrv/common/inc/ecode.h"/>
           </folder>
         </folder>
       </folder>
@@ -396,6 +447,11 @@
             <file name="app_assert.h" uri="studio:/sdk/app/common/util/app_assert/app_assert.h"/>
             <file name="sl_app_assert.h" uri="studio:/sdk/app/common/util/app_assert/sl_app_assert.h"/>
           </folder>
+          <folder name="app_log">
+            <file name="app_log.c" uri="studio:/sdk/app/common/util/app_log/app_log.c"/>
+            <file name="app_log.h" uri="studio:/sdk/app/common/util/app_log/app_log.h"/>
+            <file name="sl_app_log.h" uri="studio:/sdk/app/common/util/app_log/sl_app_log.h"/>
+          </folder>
           <folder name="app_timer">
             <file name="app_timer.c" uri="studio:/sdk/app/common/util/app_timer/app_timer.c"/>
             <file name="app_timer.h" uri="studio:/sdk/app/common/util/app_timer/app_timer.h"/>
@@ -411,6 +467,14 @@
           <folder name="in_place_ota_dfu">
             <file name="sl_bt_in_place_ota_dfu.c" uri="studio:/sdk/app/bluetooth/common/in_place_ota_dfu/sl_bt_in_place_ota_dfu.c"/>
             <file name="sl_bt_in_place_ota_dfu.h" uri="studio:/sdk/app/bluetooth/common/in_place_ota_dfu/sl_bt_in_place_ota_dfu.h"/>
+          </folder>
+          <folder name="sensor_rht">
+            <file name="sl_sensor_rht.c" uri="studio:/sdk/app/bluetooth/common/sensor_rht/sl_sensor_rht.c"/>
+            <file name="sl_sensor_rht.h" uri="studio:/sdk/app/bluetooth/common/sensor_rht/sl_sensor_rht.h"/>
+          </folder>
+          <folder name="sensor_select">
+            <file name="sl_sensor_select.c" uri="studio:/sdk/app/bluetooth/common/sensor_select/sl_sensor_select.c"/>
+            <file name="sl_sensor_select.h" uri="studio:/sdk/app/bluetooth/common/sensor_select/sl_sensor_select.h"/>
           </folder>
         </folder>
       </folder>
@@ -492,13 +556,23 @@
         <folder name="src">
           <file name="sl_board_init.c" uri="studio:/sdk/hardware/board/src/sl_board_init.c"/>
           <file name="sl_board_control_gpio.c" uri="studio:/sdk/hardware/board/src/sl_board_control_gpio.c"/>
+          <file name="brd4166a_support.c" uri="studio:/sdk/hardware/board/src/brd4166a_support.c"/>
         </folder>
         <folder name="inc">
           <file name="sl_board_control.h" uri="studio:/sdk/hardware/board/inc/sl_board_control.h"/>
           <file name="sl_board_init.h" uri="studio:/sdk/hardware/board/inc/sl_board_init.h"/>
+          <file name="brd4166a_support.h" uri="studio:/sdk/hardware/board/inc/brd4166a_support.h"/>
         </folder>
       </folder>
       <folder name="driver">
+        <folder name="configuration_over_swo">
+          <folder name="src">
+            <file name="sl_cos.c" uri="studio:/sdk/hardware/driver/configuration_over_swo/src/sl_cos.c"/>
+          </folder>
+          <folder name="inc">
+            <file name="sl_cos.h" uri="studio:/sdk/hardware/driver/configuration_over_swo/inc/sl_cos.h"/>
+          </folder>
+        </folder>
         <folder name="mx25_flash_shutdown">
           <folder name="src">
             <folder name="sl_mx25_flash_shutdown_usart">
@@ -509,6 +583,14 @@
             <folder name="sl_mx25_flash_shutdown_usart">
               <file name="sl_mx25_flash_shutdown.h" uri="studio:/sdk/hardware/driver/mx25_flash_shutdown/inc/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.h"/>
             </folder>
+          </folder>
+        </folder>
+        <folder name="si70xx">
+          <folder name="src">
+            <file name="sl_si70xx.c" uri="studio:/sdk/hardware/driver/si70xx/src/sl_si70xx.c"/>
+          </folder>
+          <folder name="inc">
+            <file name="sl_si70xx.h" uri="studio:/sdk/hardware/driver/si70xx/inc/sl_si70xx.h"/>
           </folder>
         </folder>
       </folder>
@@ -687,10 +769,10 @@
       </folder>
     </folder>
   </folder>
-  <file name="main.c" linked="false" uri="studio:/sdk/app/bluetooth/example/bt_soc_empty/main.c"/>
-  <file name="app.c" linked="false" uri="studio:/sdk/app/bluetooth/example/bt_soc_empty/app.c"/>
-  <file name="app.h" linked="false" uri="studio:/sdk/app/bluetooth/example/bt_soc_empty/app.h"/>
-  <file name="readme.md" linked="false" uri="studio:/sdk/app/bluetooth/example/bt_soc_empty/readme.md"/>
+  <file name="main.c" linked="false" uri="studio:/project/main.c"/>
+  <file name="app.c" linked="false" uri="studio:/project/app.c"/>
+  <file name="app.h" linked="false" uri="studio:/project/app.h"/>
+  <file name="readme.md" linked="false" uri="studio:/project/readme.md"/>
   <file name="create_bl_files.bat" generated="true" linked="false"/>
   <file name="create_bl_files.sh" generated="true" linked="false"/>
   <file name="create_bl_files.py" generated="true" linked="false"/>
@@ -698,6 +780,7 @@
   <includePath uri="studio:/project/"/>
   <includePath uri="studio:/sdk/platform/Device/SiliconLabs/EFR32MG12P/Include"/>
   <includePath uri="studio:/sdk/app/common/util/app_assert"/>
+  <includePath uri="studio:/sdk/app/common/util/app_log"/>
   <includePath uri="studio:/sdk/app/common/util/app_timer"/>
   <includePath uri="studio:/sdk/protocol/bluetooth/inc"/>
   <includePath uri="studio:/sdk/platform/common/inc"/>
@@ -707,10 +790,16 @@
   <includePath uri="studio:/sdk/platform/bootloader"/>
   <includePath uri="studio:/sdk/platform/bootloader/api"/>
   <includePath uri="studio:/sdk/platform/CMSIS/Core/Include"/>
+  <includePath uri="studio:/sdk/hardware/driver/configuration_over_swo/inc"/>
+  <includePath uri="studio:/sdk/platform/driver/debug/inc"/>
   <includePath uri="studio:/sdk/platform/service/device_init/inc"/>
+  <includePath uri="studio:/sdk/platform/emdrv/dmadrv/inc"/>
+  <includePath uri="studio:/sdk/platform/emdrv/common/inc"/>
   <includePath uri="studio:/sdk/platform/emlib/inc"/>
   <includePath uri="studio:/sdk/app/bluetooth/common/gatt_service_device_information"/>
+  <includePath uri="studio:/sdk/platform/driver/i2cspm/inc"/>
   <includePath uri="studio:/sdk/app/bluetooth/common/in_place_ota_dfu"/>
+  <includePath uri="studio:/sdk/platform/service/iostream/inc"/>
   <includePath uri="studio:/sdk/platform/security/sl_component/sl_mbedtls_support/config"/>
   <includePath uri="studio:/sdk/platform/security/sl_component/sl_mbedtls_support/config/preset"/>
   <includePath uri="studio:/sdk/platform/security/sl_component/sl_mbedtls_support/inc"/>
@@ -731,6 +820,9 @@
   <includePath uri="studio:/sdk/platform/radio/rail_lib/plugin/pa-conversions/efr32xg1x"/>
   <includePath uri="studio:/sdk/platform/radio/rail_lib/plugin/rail_util_power_manager_init"/>
   <includePath uri="studio:/sdk/platform/radio/rail_lib/plugin/rail_util_pti"/>
+  <includePath uri="studio:/sdk/app/bluetooth/common/sensor_rht"/>
+  <includePath uri="studio:/sdk/app/bluetooth/common/sensor_select"/>
+  <includePath uri="studio:/sdk/hardware/driver/si70xx/inc"/>
   <includePath uri="studio:/sdk/util/silicon_labs/silabs_core/memory_manager"/>
   <includePath uri="studio:/sdk/platform/common/toolchain/inc"/>
   <includePath uri="studio:/sdk/platform/service/system/inc"/>
@@ -751,6 +843,7 @@
   <macroDefinition name="MBEDTLS_PSA_CRYPTO_CONFIG_FILE" value="&lt;psa_crypto_config.h>"/>
   <macroDefinition name="SL_RAIL_LIB_MULTIPROTOCOL_SUPPORT" value="0"/>
   <macroDefinition name="SL_RAIL_UTIL_PA_CONFIG_HEADER" value="&lt;sl_rail_util_pa_config.h>"/>
+  <macroDefinition name="BRD4166A_SUPPORT"/>
   <libraryFile uri="studio:/sdk/protocol/bluetooth/lib/EFR32XG12/GCC/binapploader.o"/>
   <libraryFile uri="studio:/sdk/protocol/bluetooth/bgcommon/lib/libbgcommon_efr32xg12_gcc_release.a"/>
   <libraryFile uri="studio:/sdk/protocol/bluetooth/bgstack/ll/lib/libbluetooth_controller_efr32xg12_gcc_release.a"/>

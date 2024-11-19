@@ -14,11 +14,18 @@
 #include "btl_interface.h"
 #include "sl_board_control.h"
 #include "sl_sleeptimer.h"
+#include "app_log.h"
 #include "app_timer.h"
 #include "sl_bluetooth.h"
+#include "sl_debug_swo.h"
+#include "sl_i2cspm_instances.h"
+#include "sl_iostream_stdlib_config.h"
+#include "sl_iostream_init_usart_instances.h"
 #include "sl_mbedtls.h"
 #include "sl_mpu.h"
+#include "sl_iostream_init_instances.h"
 #include "sl_power_manager.h"
+#include "sl_cos.h"
 
 void sl_platform_init(void)
 {
@@ -37,14 +44,19 @@ void sl_platform_init(void)
 
 void sl_driver_init(void)
 {
+  sl_debug_swo_init();
+  sl_i2cspm_init_instances();
+  sl_cos_send_config();
 }
 
 void sl_service_init(void)
 {
   sl_board_configure_vcom();
   sl_sleeptimer_init();
+  sl_iostream_stdlib_disable_buffering();
   sl_mbedtls_init();
   sl_mpu_disable_execute_from_ram();
+  sl_iostream_init_instances();
 }
 
 void sl_stack_init(void)
@@ -57,6 +69,7 @@ void sl_stack_init(void)
 
 void sl_internal_app_init(void)
 {
+  app_log_init();
 }
 
 void sl_platform_process_action(void)
@@ -75,5 +88,10 @@ void sl_stack_process_action(void)
 
 void sl_internal_app_process_action(void)
 {
+}
+
+void sl_iostream_init_instances(void)
+{
+  sl_iostream_usart_init_instances();
 }
 
