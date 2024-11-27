@@ -87,4 +87,18 @@
       </properties>
     </characteristic>
   </service>
+
+  <!--Automation IO-->
+  <service advertise="false" id="automation_io" name="Automation IO" requirement="mandatory" sourceId="" type="primary" uuid="1815">
+
+    <!--Digital-->
+    <characteristic const="false" id="digital" name="Digital" sourceId="org.bluetooth.characteristic.digital" uuid="2A56">
+      <informativeText>
+Summary: The Digital characteristic is used to expose and change the state of an IO Module's digital signals.</informativeText>
+      <value length="1" type="user" variable_length="false"/>
+      <properties>
+        <write authenticated="false" bonded="false" encrypted="false"/>
+      </properties>
+    </characteristic>
+  </service>
 </gatt>

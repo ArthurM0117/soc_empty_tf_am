@@ -23,6 +23,7 @@
 #include "sl_iostream_init_usart_instances.h"
 #include "sl_mbedtls.h"
 #include "sl_mpu.h"
+#include "sl_simple_led_instances.h"
 #include "sl_iostream_init_instances.h"
 #include "sl_power_manager.h"
 #include "sl_cos.h"
@@ -46,6 +47,7 @@ void sl_driver_init(void)
 {
   sl_debug_swo_init();
   sl_i2cspm_init_instances();
+  sl_simple_led_init_instances();
   sl_cos_send_config();
 }
 

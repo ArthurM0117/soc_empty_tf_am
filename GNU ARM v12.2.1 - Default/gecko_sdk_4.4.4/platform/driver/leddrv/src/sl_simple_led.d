@@ -1,7 +1,10 @@
-autogen/sl_event_handler.o: ../autogen/sl_event_handler.c \
+gecko_sdk_4.4.4/platform/driver/leddrv/src/sl_simple_led.o: \
+ C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk/platform/driver/leddrv/src/sl_simple_led.c \
  c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h \
- ../autogen/sl_event_handler.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_chip.h \
+ c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\driver\leddrv\inc\sl_simple_led.h \
+ c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\driver\leddrv\inc\sl_led.h \
+ c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_status.h \
+ c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_gpio.h \
  c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\device\siliconlabs\efr32mg12p\include\em_device.h \
  c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\device\siliconlabs\efr32mg12p\include\efr32mg12p332f1024gl125.h \
  c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\cmsis\core\include\core_cm4.h \
@@ -56,86 +59,24 @@ autogen/sl_event_handler.o: ../autogen/sl_event_handler.c \
  c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\device\siliconlabs\efr32mg12p\include\efr32mg12p_dmareq.h \
  c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\device\siliconlabs\efr32mg12p\include\efr32mg12p_af_ports.h \
  c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\device\siliconlabs\efr32mg12p\include\efr32mg12p_af_pins.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_common.h \
  c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_assert.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_system.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_system_generic.h \
  c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_bus.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_assert.h \
  c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_core.h \
  c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_core_generic.h \
+ c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_common.h \
+ c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_assert.h \
  C:\Users\arthu\SimplicityStudio\v5_workspace\soc_empty_tf_am\autogen/sl_component_catalog.h \
  C:\Users\arthu\SimplicityStudio\v5_workspace\soc_empty_tf_am\config/emlib_core_debug_config.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\service\device_init\inc\sl_device_init_nvic.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_status.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\hardware\board\inc\sl_board_init.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\service\device_init\inc\sl_device_init_dcdc.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\service\device_init\inc\sl_device_init_lfxo.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\service\device_init\inc\sl_device_init_hfxo.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\service\device_init\inc\sl_device_init_clocks.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\service\device_init\inc\sl_device_init_emu.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\plugin\pa-conversions\pa_conversions_efr32.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\common\rail_types.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\chip\efr32\efr32xg1x\rail_chip_specific.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\common\rail_features.h \
- C:\Users\arthu\SimplicityStudio\v5_workspace\soc_empty_tf_am\config/sl_rail_util_pa_config.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\plugin\pa-conversions\pa_curves_efr32.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\plugin\pa-conversions\efr32xg1x/sl_rail_util_pa_curves.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\plugin\pa-conversions\pa_curve_types_efr32.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\plugin\rail_util_power_manager_init\sl_rail_util_power_manager_init.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\plugin\rail_util_pti\sl_rail_util_pti.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\bootloader\api\btl_interface.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\bootloader\api\btl_errorcode.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\bootloader\api\btl_reset_info.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\bootloader\api\application_properties.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\bootloader\api\btl_interface_parser.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\bootloader\api\btl_interface_storage.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\hardware\board\inc\sl_board_control.h \
  c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_enum.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\service\sleeptimer\inc\sl_sleeptimer.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\app\common\util\app_log\app_log.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\service\iostream\inc\sl_iostream.h \
- C:\Users\arthu\SimplicityStudio\v5_workspace\soc_empty_tf_am\autogen/sl_iostream_handles.h \
- C:\Users\arthu\SimplicityStudio\v5_workspace\soc_empty_tf_am\autogen/sl_iostream_init_usart_instances.h \
- C:\Users\arthu\SimplicityStudio\v5_workspace\soc_empty_tf_am\autogen/sl_component_catalog.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\service\power_manager\inc\sl_power_manager.h \
- C:\Users\arthu\SimplicityStudio\v5_workspace\soc_empty_tf_am\config/sl_power_manager_config.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_slist.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_core_generic.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\service\iostream\inc\sl_iostream_uart.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\service\iostream\inc\sl_iostream.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emdrv\dmadrv\inc\dmadrv.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emdrv\common\inc\ecode.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_ldma.h \
- C:\Users\arthu\SimplicityStudio\v5_workspace\soc_empty_tf_am\config/dmadrv_config.h \
- C:\Users\arthu\SimplicityStudio\v5_workspace\soc_empty_tf_am\config/app_log_config.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\app\common\util\app_timer\app_timer.h \
- ../autogen/sl_bluetooth.h \
- C:\Users\arthu\SimplicityStudio\v5_workspace\soc_empty_tf_am\config/sl_bluetooth_config.h \
- C:\Users\arthu\SimplicityStudio\v5_workspace\soc_empty_tf_am\config/sl_bluetooth_connection_config.h \
- C:\Users\arthu\SimplicityStudio\v5_workspace\soc_empty_tf_am\config/sl_bluetooth_advertiser_config.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_bt_stack_config.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_bt_ll_config.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_bt_api.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_bgapi.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_bt_api_compatibility.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\driver\debug\inc\sl_debug_swo.h \
- ../autogen/sl_i2cspm_instances.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\driver\i2cspm\inc\sl_i2cspm.h \
+ c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_cmu.h \
+ c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_cmu_compat.h \
  c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_gpio.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_i2c.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\service\iostream\inc\sl_iostream_stdlib_config.h \
- ../autogen/sl_iostream_init_usart_instances.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\security\sl_component\sl_mbedtls_support\inc\sl_mbedtls.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\service\mpu\inc\sl_mpu.h \
- ../autogen/sl_simple_led_instances.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\driver\leddrv\inc\sl_simple_led.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\driver\leddrv\inc\sl_led.h \
- ../autogen/sl_iostream_init_instances.h \
- c:\users\arthu\simplicitystudio\sdks\gecko_sdk\hardware\driver\configuration_over_swo\inc\sl_cos.h
+ c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\sli_em_cmu.h
 c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h:
-../autogen/sl_event_handler.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_chip.h:
+c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\driver\leddrv\inc\sl_simple_led.h:
+c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\driver\leddrv\inc\sl_led.h:
+c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_status.h:
+c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_gpio.h:
 c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\device\siliconlabs\efr32mg12p\include\em_device.h:
 c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\device\siliconlabs\efr32mg12p\include\efr32mg12p332f1024gl125.h:
 c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\cmsis\core\include\core_cm4.h:
@@ -190,80 +131,16 @@ c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\device\siliconlabs\efr32
 c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\device\siliconlabs\efr32mg12p\include\efr32mg12p_dmareq.h:
 c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\device\siliconlabs\efr32mg12p\include\efr32mg12p_af_ports.h:
 c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\device\siliconlabs\efr32mg12p\include\efr32mg12p_af_pins.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_common.h:
 c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_assert.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_system.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_system_generic.h:
 c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_bus.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_assert.h:
 c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_core.h:
 c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_core_generic.h:
+c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_common.h:
+c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_assert.h:
 C:\Users\arthu\SimplicityStudio\v5_workspace\soc_empty_tf_am\autogen/sl_component_catalog.h:
 C:\Users\arthu\SimplicityStudio\v5_workspace\soc_empty_tf_am\config/emlib_core_debug_config.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\service\device_init\inc\sl_device_init_nvic.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_status.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\hardware\board\inc\sl_board_init.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\service\device_init\inc\sl_device_init_dcdc.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\service\device_init\inc\sl_device_init_lfxo.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\service\device_init\inc\sl_device_init_hfxo.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\service\device_init\inc\sl_device_init_clocks.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\service\device_init\inc\sl_device_init_emu.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\plugin\pa-conversions\pa_conversions_efr32.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\common\rail_types.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\chip\efr32\efr32xg1x\rail_chip_specific.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\common\rail_features.h:
-C:\Users\arthu\SimplicityStudio\v5_workspace\soc_empty_tf_am\config/sl_rail_util_pa_config.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\plugin\pa-conversions\pa_curves_efr32.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\plugin\pa-conversions\efr32xg1x/sl_rail_util_pa_curves.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\plugin\pa-conversions\pa_curve_types_efr32.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\plugin\rail_util_power_manager_init\sl_rail_util_power_manager_init.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\radio\rail_lib\plugin\rail_util_pti\sl_rail_util_pti.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\bootloader\api\btl_interface.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\bootloader\api\btl_errorcode.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\bootloader\api\btl_reset_info.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\bootloader\api\application_properties.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\bootloader\api\btl_interface_parser.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\bootloader\api\btl_interface_storage.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\hardware\board\inc\sl_board_control.h:
 c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_enum.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\service\sleeptimer\inc\sl_sleeptimer.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\app\common\util\app_log\app_log.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\service\iostream\inc\sl_iostream.h:
-C:\Users\arthu\SimplicityStudio\v5_workspace\soc_empty_tf_am\autogen/sl_iostream_handles.h:
-C:\Users\arthu\SimplicityStudio\v5_workspace\soc_empty_tf_am\autogen/sl_iostream_init_usart_instances.h:
-C:\Users\arthu\SimplicityStudio\v5_workspace\soc_empty_tf_am\autogen/sl_component_catalog.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\service\power_manager\inc\sl_power_manager.h:
-C:\Users\arthu\SimplicityStudio\v5_workspace\soc_empty_tf_am\config/sl_power_manager_config.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_slist.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_core_generic.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\service\iostream\inc\sl_iostream_uart.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\service\iostream\inc\sl_iostream.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emdrv\dmadrv\inc\dmadrv.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emdrv\common\inc\ecode.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_ldma.h:
-C:\Users\arthu\SimplicityStudio\v5_workspace\soc_empty_tf_am\config/dmadrv_config.h:
-C:\Users\arthu\SimplicityStudio\v5_workspace\soc_empty_tf_am\config/app_log_config.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\app\common\util\app_timer\app_timer.h:
-../autogen/sl_bluetooth.h:
-C:\Users\arthu\SimplicityStudio\v5_workspace\soc_empty_tf_am\config/sl_bluetooth_config.h:
-C:\Users\arthu\SimplicityStudio\v5_workspace\soc_empty_tf_am\config/sl_bluetooth_connection_config.h:
-C:\Users\arthu\SimplicityStudio\v5_workspace\soc_empty_tf_am\config/sl_bluetooth_advertiser_config.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_bt_stack_config.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_bt_ll_config.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_bt_api.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_bgapi.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\protocol\bluetooth\inc\sl_bt_api_compatibility.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\driver\debug\inc\sl_debug_swo.h:
-../autogen/sl_i2cspm_instances.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\driver\i2cspm\inc\sl_i2cspm.h:
+c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_cmu.h:
+c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_cmu_compat.h:
 c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_gpio.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_i2c.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\service\iostream\inc\sl_iostream_stdlib_config.h:
-../autogen/sl_iostream_init_usart_instances.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\security\sl_component\sl_mbedtls_support\inc\sl_mbedtls.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\service\mpu\inc\sl_mpu.h:
-../autogen/sl_simple_led_instances.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\driver\leddrv\inc\sl_simple_led.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\driver\leddrv\inc\sl_led.h:
-../autogen/sl_iostream_init_instances.h:
-c:\users\arthu\simplicitystudio\sdks\gecko_sdk\hardware\driver\configuration_over_swo\inc\sl_cos.h:
+c:\users\arthu\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\sli_em_cmu.h:

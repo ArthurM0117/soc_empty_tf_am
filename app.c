@@ -10,10 +10,14 @@
 #include "gatt_db.h"
 #include "sl_sleeptimer.h" // Include the sleep timer
 
+// Define the signal for the temperature timer
+#define TEMPERATURE_TIMER_SIGNAL (1 << 0)
+
 // The advertising set handle allocated from Bluetooth stack.
 static uint8_t advertising_set_handle = 0xff;
 static sl_sleeptimer_timer_handle_t temperature_timer; // Timer handle
 static bool notifications_enabled = false;            // Notification status
+static uint8_t active_connection = 0;                 // Store active connection handle
 
 /**************************************************************************//**
  * Application Init.
@@ -28,11 +32,7 @@ SL_WEAK void app_init(void)
  *****************************************************************************/
 SL_WEAK void app_process_action(void)
 {
-  /////////////////////////////////////////////////////////////////////////////
-  // Put your additional application code here!                              //
-  // This is called infinitely.                                              //
-  // Do not call blocking functions from here!                               //
-  /////////////////////////////////////////////////////////////////////////////
+  // This function is called infinitely. Add additional application code here.
 }
 
 /**************************************************************************//**
@@ -43,29 +43,8 @@ void temperature_timer_callback(sl_sleeptimer_timer_handle_t *handle, void *data
   (void)handle;
   (void)data;
 
-  if (notifications_enabled) {
-    uint8_t ble_temperature[2];
-    size_t temp_length;
-    sl_status_t sc;
-
-    // Read and format the temperature
-    sc = read_and_format_temperature(ble_temperature, &temp_length);
-    if (sc == SL_STATUS_OK) {
-      // Send the notification
-      sc = sl_bt_gatt_server_send_notification(
-          0, // Assuming a single connection
-          gattdb_temperature,
-          temp_length,
-          ble_temperature
-      );
-
-      if (sc == SL_STATUS_OK) {
-        app_log_info("Temperature notification sent successfully.\n");
-      }
-    } else {
-      app_log_error("Failed to read and format temperature: 0x%lX\n", sc);
-    }
-  }
+  // Signal to process the timer event in the main loop
+  sl_bt_external_signal(TEMPERATURE_TIMER_SIGNAL);
 }
 
 /**************************************************************************//**
@@ -112,16 +91,12 @@ void stop_temperature_notifications(void)
 
 /**************************************************************************//**
  * Bluetooth stack event handler.
- * This overrides the dummy weak implementation.
- *
- * @param[in] evt Event coming from the Bluetooth stack.
  *****************************************************************************/
 void sl_bt_on_event(sl_bt_msg_t *evt)
 {
   sl_status_t sc;
 
   switch (SL_BT_MSG_ID(evt->header)) {
-    // -------------------------------
     case sl_bt_evt_system_boot_id:
       sc = sl_bt_advertiser_create_set(&advertising_set_handle);
       app_assert_status(sc);
@@ -143,16 +118,17 @@ void sl_bt_on_event(sl_bt_msg_t *evt)
       app_assert_status(sc);
       break;
 
-    // -------------------------------
     case sl_bt_evt_connection_opened_id:
       app_log_info("%s: connection_opened!\n", __FUNCTION__);
 
       sc = sl_sensor_rht_init();
       app_assert_status(sc);
       app_log_info("RHT Sensor initialized with status: %lu\n", sc);
+
+      // Store the active connection handle
+      active_connection = evt->data.evt_connection_opened.connection;
       break;
 
-    // -------------------------------
     case sl_bt_evt_gatt_server_user_read_request_id: {
         uint8_t ble_temperature[2];
         size_t temp_length;
@@ -172,42 +148,64 @@ void sl_bt_on_event(sl_bt_msg_t *evt)
                     NULL);
                 if (sc == SL_STATUS_OK) {
                     app_log_info("Temperature sent successfully.\n");
-                } else {
-                    app_log_error("Failed to send temperature: 0x%lX\n", sc);
                 }
-            } else {
-                app_log_error("Failed to read temperature: 0x%lX\n", sc);
             }
         }
         break;
     }
 
-    // -------------------------------
     case sl_bt_evt_gatt_server_characteristic_status_id: {
         uint16_t characteristic = evt->data.evt_gatt_server_characteristic_status.characteristic;
         uint8_t status_flags = evt->data.evt_gatt_server_characteristic_status.status_flags;
         uint16_t client_config_flags = evt->data.evt_gatt_server_characteristic_status.client_config_flags;
 
+        // Log the event details
         app_log_info("Characteristic status changed: Characteristic=%d, StatusFlags=0x%X, ClientConfigFlags=0x%X\n",
                      characteristic, status_flags, client_config_flags);
 
         if (characteristic == gattdb_temperature) {
             app_log_info("Status change relates to the Temperature characteristic.\n");
 
-            if (client_config_flags & sl_bt_gatt_notification) {
-                app_log_info("Notifications enabled for Temperature characteristic.\n");
-                start_temperature_notifications();
-            } else {
-                app_log_info("Notifications disabled for Temperature characteristic.\n");
-                stop_temperature_notifications();
+            if (status_flags & sl_bt_gatt_server_client_config) {
+                if (client_config_flags & sl_bt_gatt_notification) {
+                    app_log_info("Notifications enabled for Temperature characteristic.\n");
+                    start_temperature_notifications();
+                } else {
+                    app_log_info("Notifications disabled for Temperature characteristic.\n");
+                    stop_temperature_notifications();
+                }
             }
-        } else {
-            app_log_info("Status change relates to another characteristic.\n");
         }
         break;
     }
 
-    // -------------------------------
+    case sl_bt_evt_system_external_signal_id: {
+        // Check if the signal matches the temperature timer signal
+        if (evt->data.evt_system_external_signal.extsignals & TEMPERATURE_TIMER_SIGNAL) {
+            if (notifications_enabled) {
+                uint8_t ble_temperature[2];
+                size_t temp_length;
+
+                // Read and format the temperature
+                sc = read_and_format_temperature(ble_temperature, &temp_length);
+                if (sc == SL_STATUS_OK) {
+                    // Send the notification
+                    sc = sl_bt_gatt_server_send_notification(
+                        active_connection,
+                        gattdb_temperature,
+                        temp_length,
+                        ble_temperature
+                    );
+
+                    if (sc == SL_STATUS_OK) {
+                        app_log_info("Temperature notification sent successfully.\n");
+                    }
+                }
+            }
+        }
+        break;
+    }
+
     case sl_bt_evt_connection_closed_id:
       app_log_info("%s: connection_closed!\n", __FUNCTION__);
 
@@ -225,7 +223,6 @@ void sl_bt_on_event(sl_bt_msg_t *evt)
       stop_temperature_notifications();
       break;
 
-    // -------------------------------
     default:
       break;
   }

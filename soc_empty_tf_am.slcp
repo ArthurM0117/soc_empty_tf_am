@@ -50,6 +50,8 @@ component:
 - {id: mpu}
 - {id: rail_util_pti}
 - {id: sensor_rht}
+- instance: [led0]
+  id: simple_led
 other_file:
 - {path: image/readme_img0.png}
 - {path: image/readme_img1.png}
