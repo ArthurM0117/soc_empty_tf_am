@@ -5,10 +5,15 @@
 #include "app_log.h"
 #include <stdint.h>
 #include "sl_status.h"
-#include "sl_sensor_rht.h" // Assurez-vous que cette ligne est incluse !
+#include "sl_sensor_rht.h"
+#include "temperature.h"
+#include "gatt_db.h"
+#include "sl_sleeptimer.h" // Include the sleep timer
 
 // The advertising set handle allocated from Bluetooth stack.
 static uint8_t advertising_set_handle = 0xff;
+static sl_sleeptimer_timer_handle_t temperature_timer; // Timer handle
+static bool notifications_enabled = false;            // Notification status
 
 /**************************************************************************//**
  * Application Init.
@@ -31,6 +36,81 @@ SL_WEAK void app_process_action(void)
 }
 
 /**************************************************************************//**
+ * Temperature Timer Callback.
+ *****************************************************************************/
+void temperature_timer_callback(sl_sleeptimer_timer_handle_t *handle, void *data)
+{
+  (void)handle;
+  (void)data;
+
+  if (notifications_enabled) {
+    uint8_t ble_temperature[2];
+    size_t temp_length;
+    sl_status_t sc;
+
+    // Read and format the temperature
+    sc = read_and_format_temperature(ble_temperature, &temp_length);
+    if (sc == SL_STATUS_OK) {
+      // Send the notification
+      sc = sl_bt_gatt_server_send_notification(
+          0, // Assuming a single connection
+          gattdb_temperature,
+          temp_length,
+          ble_temperature
+      );
+
+      if (sc == SL_STATUS_OK) {
+        app_log_info("Temperature notification sent successfully.\n");
+      }
+    } else {
+      app_log_error("Failed to read and format temperature: 0x%lX\n", sc);
+    }
+  }
+}
+
+/**************************************************************************//**
+ * Start Temperature Notifications.
+ *****************************************************************************/
+void start_temperature_notifications(void)
+{
+  sl_status_t sc;
+
+  notifications_enabled = true;
+
+  sc = sl_sleeptimer_start_periodic_timer_ms(
+      &temperature_timer,
+      1000, // Timer interval in milliseconds (1 second)
+      temperature_timer_callback,
+      NULL,
+      0,
+      0
+  );
+
+  if (sc != SL_STATUS_OK) {
+    app_log_error("Failed to start temperature timer: 0x%lX\n", sc);
+  } else {
+    app_log_info("Temperature notifications started.\n");
+  }
+}
+
+/**************************************************************************//**
+ * Stop Temperature Notifications.
+ *****************************************************************************/
+void stop_temperature_notifications(void)
+{
+  sl_status_t sc;
+
+  notifications_enabled = false;
+
+  sc = sl_sleeptimer_stop_timer(&temperature_timer);
+  if (sc != SL_STATUS_OK) {
+    app_log_error("Failed to stop temperature timer: 0x%lX\n", sc);
+  } else {
+    app_log_info("Temperature notifications stopped.\n");
+  }
+}
+
+/**************************************************************************//**
  * Bluetooth stack event handler.
  * This overrides the dummy weak implementation.
  *
@@ -42,69 +122,110 @@ void sl_bt_on_event(sl_bt_msg_t *evt)
 
   switch (SL_BT_MSG_ID(evt->header)) {
     // -------------------------------
-    // This event indicates the device has started and the radio is ready.
-    // Do not call any stack command before receiving this boot event!
     case sl_bt_evt_system_boot_id:
-      // Create an advertising set.
       sc = sl_bt_advertiser_create_set(&advertising_set_handle);
       app_assert_status(sc);
 
-      // Generate data for advertising
       sc = sl_bt_legacy_advertiser_generate_data(advertising_set_handle,
                                                  sl_bt_advertiser_general_discoverable);
       app_assert_status(sc);
 
-      // Set advertising interval to 100ms.
       sc = sl_bt_advertiser_set_timing(
-        advertising_set_handle,
-        160, // min. adv. interval (milliseconds * 1.6)
-        160, // max. adv. interval (milliseconds * 1.6)
-        0,   // adv. duration
-        0);  // max. num. adv. events
+          advertising_set_handle,
+          160,
+          160,
+          0,
+          0);
       app_assert_status(sc);
-      // Start advertising and enable connections.
+
       sc = sl_bt_legacy_advertiser_start(advertising_set_handle,
                                          sl_bt_legacy_advertiser_connectable);
       app_assert_status(sc);
       break;
 
     // -------------------------------
-    // This event indicates that a new connection was opened.
     case sl_bt_evt_connection_opened_id:
       app_log_info("%s: connection_opened!\n", __FUNCTION__);
 
-      // Initialize the Relative Humidity and Temperature sensor
       sc = sl_sensor_rht_init();
       app_assert_status(sc);
       app_log_info("RHT Sensor initialized with status: %lu\n", sc);
       break;
 
     // -------------------------------
-    // This event indicates that a connection was closed.
+    case sl_bt_evt_gatt_server_user_read_request_id: {
+        uint8_t ble_temperature[2];
+        size_t temp_length;
+
+        app_log_info("Read request for characteristic: %d\n",
+                     evt->data.evt_gatt_server_user_read_request.characteristic);
+
+        if (evt->data.evt_gatt_server_user_read_request.characteristic == gattdb_temperature) {
+            sc = read_and_format_temperature(ble_temperature, &temp_length);
+            if (sc == SL_STATUS_OK) {
+                sc = sl_bt_gatt_server_send_user_read_response(
+                    evt->data.evt_gatt_server_user_read_request.connection,
+                    evt->data.evt_gatt_server_user_read_request.characteristic,
+                    0,
+                    temp_length,
+                    ble_temperature,
+                    NULL);
+                if (sc == SL_STATUS_OK) {
+                    app_log_info("Temperature sent successfully.\n");
+                } else {
+                    app_log_error("Failed to send temperature: 0x%lX\n", sc);
+                }
+            } else {
+                app_log_error("Failed to read temperature: 0x%lX\n", sc);
+            }
+        }
+        break;
+    }
+
+    // -------------------------------
+    case sl_bt_evt_gatt_server_characteristic_status_id: {
+        uint16_t characteristic = evt->data.evt_gatt_server_characteristic_status.characteristic;
+        uint8_t status_flags = evt->data.evt_gatt_server_characteristic_status.status_flags;
+        uint16_t client_config_flags = evt->data.evt_gatt_server_characteristic_status.client_config_flags;
+
+        app_log_info("Characteristic status changed: Characteristic=%d, StatusFlags=0x%X, ClientConfigFlags=0x%X\n",
+                     characteristic, status_flags, client_config_flags);
+
+        if (characteristic == gattdb_temperature) {
+            app_log_info("Status change relates to the Temperature characteristic.\n");
+
+            if (client_config_flags & sl_bt_gatt_notification) {
+                app_log_info("Notifications enabled for Temperature characteristic.\n");
+                start_temperature_notifications();
+            } else {
+                app_log_info("Notifications disabled for Temperature characteristic.\n");
+                stop_temperature_notifications();
+            }
+        } else {
+            app_log_info("Status change relates to another characteristic.\n");
+        }
+        break;
+    }
+
+    // -------------------------------
     case sl_bt_evt_connection_closed_id:
       app_log_info("%s: connection_closed!\n", __FUNCTION__);
 
-      // Deinitialize the RHT sensor
       sl_sensor_rht_deinit();
       app_log_info("RHT Sensor deinitialized\n");
 
-      // Generate data for advertising
       sc = sl_bt_legacy_advertiser_generate_data(advertising_set_handle,
                                                  sl_bt_advertiser_general_discoverable);
       app_assert_status(sc);
 
-      // Restart advertising after client has disconnected.
       sc = sl_bt_legacy_advertiser_start(advertising_set_handle,
                                          sl_bt_legacy_advertiser_connectable);
       app_assert_status(sc);
+
+      stop_temperature_notifications();
       break;
 
-    ///////////////////////////////////////////////////////////////////////////
-    // Add additional event handlers here as your application requires!      //
-    ///////////////////////////////////////////////////////////////////////////
-
     // -------------------------------
-    // Default event handler.
     default:
       break;
   }
