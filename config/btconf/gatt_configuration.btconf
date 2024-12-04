@@ -86,6 +86,21 @@
         <notify authenticated="false" bonded="false" encrypted="false"/>
       </properties>
     </characteristic>
+
+    <!--Measurement Interval-->
+    <characteristic const="false" id="measurement_interval" name="Measurement Interval" sourceId="org.bluetooth.characteristic.measurement_interval" uuid="2A21">
+      <informativeText>Abstract: 
+    The Measurement Interval characteristic defines the time between measurements.            
+		
+Summary: 
+    This characteristic is capable of representing values from 1 second to 65535 seconds which is equal to 18 hours, 12 minutes and 15 seconds.            
+		</informativeText>
+      <value length="2" type="user" variable_length="false"/>
+      <properties>
+        <read authenticated="false" bonded="false" encrypted="false"/>
+        <write authenticated="false" bonded="false" encrypted="false"/>
+      </properties>
+    </characteristic>
   </service>
 
   <!--Automation IO-->

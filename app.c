@@ -9,15 +9,18 @@
 #include "temperature.h"
 #include "gatt_db.h"
 #include "sl_sleeptimer.h"
-#include "sl_simple_led_instances.h" // Include the Simple LED API header
+#include "sl_simple_led_instances.h"
 
 #define TEMPERATURE_TIMER_SIGNAL (1 << 0)
+
+// Default measurement interval in seconds
+#define DEFAULT_MEASUREMENT_INTERVAL 1
 
 static uint8_t advertising_set_handle = 0xff;
 static sl_sleeptimer_timer_handle_t temperature_timer;
 static bool notifications_enabled = false;
 static uint8_t active_connection = 0;
-static uint8_t digital_state = 0xFF; // Persistent state for Digital characteristic
+static uint16_t measurement_interval = DEFAULT_MEASUREMENT_INTERVAL;
 
 /**************************************************************************//**
  * Application Init.
@@ -56,9 +59,10 @@ void start_temperature_notifications(void)
 {
     sl_status_t sc;
     notifications_enabled = true;
+
     sc = sl_sleeptimer_start_periodic_timer_ms(
         &temperature_timer,
-        1000, // Timer interval in milliseconds (1 second)
+        measurement_interval * 1000, // Timer interval in milliseconds
         temperature_timer_callback,
         NULL,
         0,
@@ -67,7 +71,7 @@ void start_temperature_notifications(void)
     if (sc != SL_STATUS_OK) {
         app_log_error("Failed to start temperature timer: 0x%lX\n", sc);
     } else {
-        app_log_info("Temperature notifications started.\n");
+        app_log_info("Temperature notifications started with interval: %d seconds.\n", measurement_interval);
     }
 }
 
@@ -78,6 +82,7 @@ void stop_temperature_notifications(void)
 {
     sl_status_t sc;
     notifications_enabled = false;
+
     sc = sl_sleeptimer_stop_timer(&temperature_timer);
     if (sc != SL_STATUS_OK) {
         app_log_error("Failed to stop temperature timer: 0x%lX\n", sc);
@@ -125,44 +130,50 @@ void sl_bt_on_event(sl_bt_msg_t *evt)
         active_connection = evt->data.evt_connection_opened.connection;
         break;
 
-    case sl_bt_evt_gatt_server_user_write_request_id: {
-        // Log the att_opcode to understand the type of write operation
-        uint8_t att_opcode = evt->data.evt_gatt_server_user_write_request.att_opcode;
-        app_log_info("Write Request Opcode: 0x%X\n", att_opcode);
+    case sl_bt_evt_gatt_server_user_read_request_id: {
+        uint16_t characteristic = evt->data.evt_gatt_server_user_read_request.characteristic;
 
+        if (characteristic == gattdb_measurement_interval) {
+            app_log_info("Read request for Measurement Interval characteristic.\n");
+            sc = sl_bt_gatt_server_send_user_read_response(
+                evt->data.evt_gatt_server_user_read_request.connection,
+                characteristic,
+                0,
+                sizeof(measurement_interval),
+                (const uint8_t *)&measurement_interval,
+                NULL);
+
+            if (sc == SL_STATUS_OK) {
+                app_log_info("Measurement Interval sent successfully: %d seconds.\n", measurement_interval);
+            } else {
+                app_log_error("Failed to send Measurement Interval: 0x%lX\n", sc);
+            }
+        }
+        break;
+    }
+
+    case sl_bt_evt_gatt_server_user_write_request_id: {
         uint16_t characteristic = evt->data.evt_gatt_server_user_write_request.characteristic;
 
-        if (characteristic == gattdb_digital) {
+        if (characteristic == gattdb_measurement_interval) {
             uint8_t *written_data = evt->data.evt_gatt_server_user_write_request.value.data;
 
-            app_log_info("Write request on Digital characteristic. Data[0]: 0x%X\n", written_data[0]);
+            if (evt->data.evt_gatt_server_user_write_request.value.len == sizeof(measurement_interval)) {
+                measurement_interval = *(uint16_t *)written_data;
+                app_log_info("Measurement Interval updated to: %d seconds.\n", measurement_interval);
 
-            // Check if the state has changed
-            if (digital_state != written_data[0]) {
-                digital_state = written_data[0];
-
-                for (size_t i = 0; i < SL_SIMPLE_LED_COUNT; i++) {
-                    if (digital_state == 0x0) { // Inactive
-                        app_log_info("Digital Inactive: Turning LED %d off.\n", i);
-                        sl_led_turn_off(SL_SIMPLE_LED_INSTANCE(i));
-                    } else if (digital_state == 0x1) { // Active
-                        app_log_info("Digital Active: Turning LED %d on.\n", i);
-                        sl_led_turn_on(SL_SIMPLE_LED_INSTANCE(i));
-                    }
+                if (notifications_enabled) {
+                    stop_temperature_notifications();
+                    start_temperature_notifications();
                 }
             } else {
-                app_log_info("Digital state unchanged. No action taken.\n");
+                app_log_error("Invalid Measurement Interval write request.\n");
             }
 
-            if (att_opcode == sl_bt_gatt_write_request) {
-                sl_bt_gatt_server_send_user_write_response(
-                    evt->data.evt_gatt_server_user_write_request.connection,
-                    characteristic,
-                    0);
-                app_log_info("Write to Digital characteristic confirmed.\n");
-            } else {
-                app_log_info("Write Command received. No response sent.\n");
-            }
+            sl_bt_gatt_server_send_user_write_response(
+                evt->data.evt_gatt_server_user_write_request.connection,
+                characteristic,
+                0);
         }
         break;
     }
@@ -171,9 +182,6 @@ void sl_bt_on_event(sl_bt_msg_t *evt)
         uint16_t characteristic = evt->data.evt_gatt_server_characteristic_status.characteristic;
         uint8_t status_flags = evt->data.evt_gatt_server_characteristic_status.status_flags;
         uint16_t client_config_flags = evt->data.evt_gatt_server_characteristic_status.client_config_flags;
-
-        app_log_info("Characteristic status changed: Characteristic=%d, StatusFlags=0x%X, ClientConfigFlags=0x%X\n",
-                     characteristic, status_flags, client_config_flags);
 
         if (characteristic == gattdb_temperature) {
             if (status_flags & sl_bt_gatt_server_client_config) {
