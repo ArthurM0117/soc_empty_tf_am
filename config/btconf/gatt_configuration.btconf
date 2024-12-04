@@ -98,6 +98,7 @@ Summary: The Digital characteristic is used to expose and change the state of an
       <value length="1" type="user" variable_length="false"/>
       <properties>
         <write authenticated="false" bonded="false" encrypted="false"/>
+        <write_no_response authenticated="false" bonded="false" encrypted="false"/>
       </properties>
     </characteristic>
   </service>
