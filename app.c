@@ -29,7 +29,6 @@ void app_init(void)
     // Initialize all Simple LED instances
     sl_simple_led_init_instances();
     app_log_info("LED instances initialized.\n");
-
 }
 
 /**************************************************************************//**
@@ -127,6 +126,10 @@ void sl_bt_on_event(sl_bt_msg_t *evt)
         break;
 
     case sl_bt_evt_gatt_server_user_write_request_id: {
+        // Log the att_opcode to understand the type of write operation
+        uint8_t att_opcode = evt->data.evt_gatt_server_user_write_request.att_opcode;
+        app_log_info("Write Request Opcode: 0x%X\n", att_opcode);
+
         uint16_t characteristic = evt->data.evt_gatt_server_user_write_request.characteristic;
 
         if (characteristic == gattdb_digital) {
@@ -151,16 +154,18 @@ void sl_bt_on_event(sl_bt_msg_t *evt)
                 app_log_info("Digital state unchanged. No action taken.\n");
             }
 
-            sl_bt_gatt_server_send_user_write_response(
-                evt->data.evt_gatt_server_user_write_request.connection,
-                characteristic,
-                0);
-
-            app_log_info("Write to Digital characteristic confirmed. Value written: 0x%X\n", digital_state);
+            if (att_opcode == sl_bt_gatt_write_request) {
+                sl_bt_gatt_server_send_user_write_response(
+                    evt->data.evt_gatt_server_user_write_request.connection,
+                    characteristic,
+                    0);
+                app_log_info("Write to Digital characteristic confirmed.\n");
+            } else {
+                app_log_info("Write Command received. No response sent.\n");
+            }
         }
         break;
     }
-
 
     case sl_bt_evt_gatt_server_characteristic_status_id: {
         uint16_t characteristic = evt->data.evt_gatt_server_characteristic_status.characteristic;
