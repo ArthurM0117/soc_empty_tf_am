@@ -97,6 +97,7 @@
 Summary: The Digital characteristic is used to expose and change the state of an IO Module's digital signals.</informativeText>
       <value length="1" type="user" variable_length="false"/>
       <properties>
+        <read authenticated="false" bonded="false" encrypted="false"/>
         <write authenticated="false" bonded="false" encrypted="false"/>
       </properties>
     </characteristic>

@@ -154,6 +154,29 @@ void sl_bt_on_event(sl_bt_msg_t *evt)
         break;
     }
 
+    case sl_bt_evt_gatt_server_user_write_request_id: {
+        uint16_t characteristic = evt->data.evt_gatt_server_user_write_request.characteristic;
+
+        if (characteristic == gattdb_digital) { // Check for the Digital characteristic
+            uint8_t *written_data = evt->data.evt_gatt_server_user_write_request.value.data;
+            size_t data_length = evt->data.evt_gatt_server_user_write_request.value.len;
+
+            app_log_info("Write request on Digital characteristic. Data Length: %d, Data[0]: 0x%X\n",
+                         data_length, written_data[0]);
+
+            // Send a response back to confirm write
+            sl_bt_gatt_server_send_user_write_response(
+                evt->data.evt_gatt_server_user_write_request.connection,
+                characteristic,
+                0 // Success code
+            );
+
+            // Confirm in logs
+            app_log_info("Write to Digital characteristic confirmed. Value written: 0x%X\n", written_data[0]);
+        }
+        break;
+    }
+
     case sl_bt_evt_gatt_server_characteristic_status_id: {
         uint16_t characteristic = evt->data.evt_gatt_server_characteristic_status.characteristic;
         uint8_t status_flags = evt->data.evt_gatt_server_characteristic_status.status_flags;
