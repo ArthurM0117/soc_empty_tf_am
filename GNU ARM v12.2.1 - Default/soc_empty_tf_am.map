@@ -433,7 +433,7 @@ c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/12.2.rel1_2023.7
 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/12.2.rel1_2023.7/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/softfp\libc_nano.a(libc_a-strcmp.o)
                               ./autogen/sl_iostream_handles.o (strcmp)
 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/12.2.rel1_2023.7/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/softfp\libc_nano.a(libc_a-memcpy-stub.o)
-                              ./gecko_sdk_4.4.4/platform/emlib/src/em_crypto.o (memcpy)
+                              ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o (memcpy)
 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/12.2.rel1_2023.7/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/softfp\libc_nano.a(libc_a-strlen.o)
                               ./gecko_sdk_4.4.4/util/third_party/mbedtls/library/bignum.o (strlen)
 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/12.2.rel1_2023.7/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/softfp\libc_nano.a(libc_a-freer.o)
@@ -583,6 +583,33 @@ Discarded input sections
  .text          0x00000000        0x0 ./gecko_sdk_4.4.4/app/bluetooth/common/in_place_ota_dfu/sl_bt_in_place_ota_dfu.o
  .data          0x00000000        0x0 ./gecko_sdk_4.4.4/app/bluetooth/common/in_place_ota_dfu/sl_bt_in_place_ota_dfu.o
  .bss           0x00000000        0x0 ./gecko_sdk_4.4.4/app/bluetooth/common/in_place_ota_dfu/sl_bt_in_place_ota_dfu.o
+ .text          0x00000000        0x0 ./gecko_sdk_4.4.4/app/bluetooth/common/sensor_light/sl_sensor_light.o
+ .data          0x00000000        0x0 ./gecko_sdk_4.4.4/app/bluetooth/common/sensor_light/sl_sensor_light.o
+ .bss           0x00000000        0x0 ./gecko_sdk_4.4.4/app/bluetooth/common/sensor_light/sl_sensor_light.o
+ .rodata.sl_sensor_light_init.str1.1
+                0x00000000       0xe6 ./gecko_sdk_4.4.4/app/bluetooth/common/sensor_light/sl_sensor_light.o
+ .text.sl_sensor_light_init
+                0x00000000       0x94 ./gecko_sdk_4.4.4/app/bluetooth/common/sensor_light/sl_sensor_light.o
+ .text.sl_sensor_light_deinit
+                0x00000000       0x14 ./gecko_sdk_4.4.4/app/bluetooth/common/sensor_light/sl_sensor_light.o
+ .text.sl_sensor_light_get
+                0x00000000       0x28 ./gecko_sdk_4.4.4/app/bluetooth/common/sensor_light/sl_sensor_light.o
+ .rodata.__func__.0
+                0x00000000       0x15 ./gecko_sdk_4.4.4/app/bluetooth/common/sensor_light/sl_sensor_light.o
+ .bss.initialized
+                0x00000000        0x1 ./gecko_sdk_4.4.4/app/bluetooth/common/sensor_light/sl_sensor_light.o
+ .debug_info    0x00000000      0x617 ./gecko_sdk_4.4.4/app/bluetooth/common/sensor_light/sl_sensor_light.o
+ .debug_abbrev  0x00000000      0x235 ./gecko_sdk_4.4.4/app/bluetooth/common/sensor_light/sl_sensor_light.o
+ .debug_loc     0x00000000      0x1c6 ./gecko_sdk_4.4.4/app/bluetooth/common/sensor_light/sl_sensor_light.o
+ .debug_aranges
+                0x00000000       0x30 ./gecko_sdk_4.4.4/app/bluetooth/common/sensor_light/sl_sensor_light.o
+ .debug_ranges  0x00000000       0x38 ./gecko_sdk_4.4.4/app/bluetooth/common/sensor_light/sl_sensor_light.o
+ .debug_line    0x00000000      0x684 ./gecko_sdk_4.4.4/app/bluetooth/common/sensor_light/sl_sensor_light.o
+ .debug_str     0x00000000      0x4db ./gecko_sdk_4.4.4/app/bluetooth/common/sensor_light/sl_sensor_light.o
+ .comment       0x00000000       0x46 ./gecko_sdk_4.4.4/app/bluetooth/common/sensor_light/sl_sensor_light.o
+ .debug_frame   0x00000000       0x6c ./gecko_sdk_4.4.4/app/bluetooth/common/sensor_light/sl_sensor_light.o
+ .ARM.attributes
+                0x00000000       0x32 ./gecko_sdk_4.4.4/app/bluetooth/common/sensor_light/sl_sensor_light.o
  .text          0x00000000        0x0 ./gecko_sdk_4.4.4/app/bluetooth/common/sensor_rht/sl_sensor_rht.o
  .data          0x00000000        0x0 ./gecko_sdk_4.4.4/app/bluetooth/common/sensor_rht/sl_sensor_rht.o
  .bss           0x00000000        0x0 ./gecko_sdk_4.4.4/app/bluetooth/common/sensor_rht/sl_sensor_rht.o
@@ -644,6 +671,67 @@ Discarded input sections
  .text          0x00000000        0x0 ./gecko_sdk_4.4.4/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
  .data          0x00000000        0x0 ./gecko_sdk_4.4.4/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
  .bss           0x00000000        0x0 ./gecko_sdk_4.4.4/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
+ .text          0x00000000        0x0 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .data          0x00000000        0x0 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .bss           0x00000000        0x0 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .text.sl_si1133_calculate_evaluation_polynomial.constprop.0
+                0x00000000       0xc2 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .text.sl_si1133_compute_lux.constprop.0
+                0x00000000       0x38 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .text.sl_si1133_read_register
+                0x00000000       0x34 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .text.sl_si1133_wait_until_sleep
+                0x00000000       0x30 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .text.sl_si1133_write_register
+                0x00000000       0x3c ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .text.sl_si1133_send_command
+                0x00000000       0xb6 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .text.sl_si1133_write_register_block
+                0x00000000       0x48 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .text.sl_si1133_read_register_block
+                0x00000000       0x34 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .text.sl_si1133_reset
+                0x00000000       0x16 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .text.sl_si1133_reset_command_counter
+                0x00000000        0x6 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .text.sl_si1133_force_measurement
+                0x00000000        0x6 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .text.sl_si1133_start_measurement
+                0x00000000        0x6 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .text.sl_si1133_read_parameter
+                0x00000000       0x2a ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .text.sl_si1133_set_parameter
+                0x00000000       0x7a ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .text.sl_si1133_init
+                0x00000000       0xc4 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .text.sl_si1133_pause_measurement
+                0x00000000        0x6 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .text.sl_si1133_deinit
+                0x00000000       0x22 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .text.sl_si1133_read_samples
+                0x00000000       0x94 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .text.sl_si1133_measure_lux_uvi
+                0x00000000       0x8c ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .text.sl_si1133_get_hardware_id
+                0x00000000        0x8 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .text.sl_si1133_get_measurement
+                0x00000000       0x5c ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .text.sl_si1133_get_irq_status
+                0x00000000        0x8 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .data.uk       0x00000000        0x8 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .data.lk       0x00000000       0x34 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .debug_info    0x00000000     0x1939 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .debug_abbrev  0x00000000      0x3f5 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .debug_loc     0x00000000     0x1395 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .debug_aranges
+                0x00000000       0xc8 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .debug_ranges  0x00000000      0x160 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .debug_line    0x00000000      0xd09 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .debug_str     0x00000000      0x7d2 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .comment       0x00000000       0x46 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .debug_frame   0x00000000      0x278 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
+ .ARM.attributes
+                0x00000000       0x32 ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
  .text          0x00000000        0x0 ./gecko_sdk_4.4.4/hardware/driver/si70xx/src/sl_si70xx.o
  .data          0x00000000        0x0 ./gecko_sdk_4.4.4/hardware/driver/si70xx/src/sl_si70xx.o
  .bss           0x00000000        0x0 ./gecko_sdk_4.4.4/hardware/driver/si70xx/src/sl_si70xx.o
@@ -14510,6 +14598,7 @@ LOAD ./autogen/sl_iostream_init_usart_instances.o
 LOAD ./autogen/sl_power_manager_handler.o
 LOAD ./autogen/sl_simple_led_instances.o
 LOAD ./gecko_sdk_4.4.4/app/bluetooth/common/in_place_ota_dfu/sl_bt_in_place_ota_dfu.o
+LOAD ./gecko_sdk_4.4.4/app/bluetooth/common/sensor_light/sl_sensor_light.o
 LOAD ./gecko_sdk_4.4.4/app/bluetooth/common/sensor_rht/sl_sensor_rht.o
 LOAD ./gecko_sdk_4.4.4/app/bluetooth/common/sensor_select/sl_sensor_select.o
 LOAD ./gecko_sdk_4.4.4/app/common/util/app_log/app_log.o
@@ -14519,6 +14608,7 @@ LOAD ./gecko_sdk_4.4.4/hardware/board/src/sl_board_control_gpio.o
 LOAD ./gecko_sdk_4.4.4/hardware/board/src/sl_board_init.o
 LOAD ./gecko_sdk_4.4.4/hardware/driver/configuration_over_swo/src/sl_cos.o
 LOAD ./gecko_sdk_4.4.4/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
+LOAD ./gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.o
 LOAD ./gecko_sdk_4.4.4/hardware/driver/si70xx/src/sl_si70xx.o
 LOAD ./gecko_sdk_4.4.4/platform/Device/SiliconLabs/EFR32MG12P/Source/startup_efr32mg12p.o
 LOAD ./gecko_sdk_4.4.4/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
@@ -14680,7 +14770,7 @@ LOAD c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/12.2.rel1_2
                 0x0000b800                . = ALIGN (0x800)
  *fill*         0x0000b7c0       0x40 
 
-.text           0x0000b800    0x2c864
+.text           0x0000b800    0x2c8c8
                 0x0000b800                linker_vectors_begin = .
  *(.vectors)
  .vectors       0x0000b800      0x10c ./gecko_sdk_4.4.4/platform/Device/SiliconLabs/EFR32MG12P/Source/startup_efr32mg12p.o
@@ -20809,514 +20899,514 @@ LOAD c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/12.2.rel1_2
                 0x00035110       0x20 ./autogen/gatt_db.o
                 0x00035110                gattdb
  .rodata.gattdb_attributes_map
-                0x00035130      0x240 ./autogen/gatt_db.o
+                0x00035130      0x2a0 ./autogen/gatt_db.o
                 0x00035130                gattdb_attributes_map
  .rodata.gattdb_attribute_field_0
-                0x00035370        0x4 ./autogen/gatt_db.o
-                0x00035370                gattdb_attribute_field_0
+                0x000353d0        0x4 ./autogen/gatt_db.o
+                0x000353d0                gattdb_attribute_field_0
  .rodata.gattdb_attribute_field_8
-                0x00035374        0x4 ./autogen/gatt_db.o
-                0x00035374                gattdb_attribute_field_8
+                0x000353d4        0x4 ./autogen/gatt_db.o
+                0x000353d4                gattdb_attribute_field_8
  .rodata.gattdb_attribute_field_12
-                0x00035378        0x4 ./autogen/gatt_db.o
-                0x00035378                gattdb_attribute_field_12
+                0x000353d8        0x4 ./autogen/gatt_db.o
+                0x000353d8                gattdb_attribute_field_12
  .rodata.gattdb_attribute_field_13
-                0x0003537c        0x4 ./autogen/gatt_db.o
-                0x0003537c                gattdb_attribute_field_13
+                0x000353dc        0x4 ./autogen/gatt_db.o
+                0x000353dc                gattdb_attribute_field_13
  .rodata.gattdb_attribute_field_15
-                0x00035380        0xe ./autogen/gatt_db.o
-                0x00035380                gattdb_attribute_field_15
+                0x000353e0        0xe ./autogen/gatt_db.o
+                0x000353e0                gattdb_attribute_field_15
  .rodata.gattdb_attribute_field_24
-                0x0003538e        0x4 ./autogen/gatt_db.o
-                0x0003538e                gattdb_attribute_field_24
- .rodata.gattdb_attribute_field_30
-                0x00035392        0x4 ./autogen/gatt_db.o
-                0x00035392                gattdb_attribute_field_30
- .rodata.gattdb_attribute_field_33
-                0x00035396       0x12 ./autogen/gatt_db.o
-                0x00035396                gattdb_attribute_field_33
+                0x000353ee        0x4 ./autogen/gatt_db.o
+                0x000353ee                gattdb_attribute_field_24
+ .rodata.gattdb_attribute_field_36
+                0x000353f2        0x4 ./autogen/gatt_db.o
+                0x000353f2                gattdb_attribute_field_36
+ .rodata.gattdb_attribute_field_39
+                0x000353f6       0x12 ./autogen/gatt_db.o
+                0x000353f6                gattdb_attribute_field_39
  .rodata.gattdb_uuidtable_128_map
-                0x000353a8       0x10 ./autogen/gatt_db.o
-                0x000353a8                gattdb_uuidtable_128_map
+                0x00035408       0x10 ./autogen/gatt_db.o
+                0x00035408                gattdb_uuidtable_128_map
  .rodata.gattdb_uuidtable_16_map
-                0x000353b8       0x22 ./autogen/gatt_db.o
-                0x000353b8                gattdb_uuidtable_16_map
- *fill*         0x000353da        0x2 
- .rodata        0x000353dc       0x1c ./autogen/sl_iostream_init_usart_instances.o
+                0x00035418       0x26 ./autogen/gatt_db.o
+                0x00035418                gattdb_uuidtable_16_map
+ *fill*         0x0003543e        0x2 
+ .rodata        0x00035440       0x1c ./autogen/sl_iostream_init_usart_instances.o
  .rodata.sl_led_led0
-                0x000353f8       0x18 ./autogen/sl_simple_led_instances.o
-                0x000353f8                sl_led_led0
+                0x0003545c       0x18 ./autogen/sl_simple_led_instances.o
+                0x0003545c                sl_led_led0
  .rodata.delay_timer_cb.str1.1
-                0x00035410       0x6e ./gecko_sdk_4.4.4/app/bluetooth/common/in_place_ota_dfu/sl_bt_in_place_ota_dfu.o
+                0x00035474       0x6e ./gecko_sdk_4.4.4/app/bluetooth/common/in_place_ota_dfu/sl_bt_in_place_ota_dfu.o
                                  0xaa (size before relaxing)
  .rodata.__func__.0
-                0x0003547e        0xf ./gecko_sdk_4.4.4/app/bluetooth/common/in_place_ota_dfu/sl_bt_in_place_ota_dfu.o
+                0x000354e2        0xf ./gecko_sdk_4.4.4/app/bluetooth/common/in_place_ota_dfu/sl_bt_in_place_ota_dfu.o
  .rodata.__func__.1
-                0x0003548d       0x20 ./gecko_sdk_4.4.4/app/bluetooth/common/in_place_ota_dfu/sl_bt_in_place_ota_dfu.o
+                0x000354f1       0x20 ./gecko_sdk_4.4.4/app/bluetooth/common/in_place_ota_dfu/sl_bt_in_place_ota_dfu.o
  .rodata.sl_sensor_rht_init.str1.1
-                0x000354ad       0xa7 ./gecko_sdk_4.4.4/app/bluetooth/common/sensor_rht/sl_sensor_rht.o
+                0x00035511       0xa7 ./gecko_sdk_4.4.4/app/bluetooth/common/sensor_rht/sl_sensor_rht.o
                                  0xba (size before relaxing)
  .rodata.__func__.0
-                0x00035554       0x13 ./gecko_sdk_4.4.4/app/bluetooth/common/sensor_rht/sl_sensor_rht.o
+                0x000355b8       0x13 ./gecko_sdk_4.4.4/app/bluetooth/common/sensor_rht/sl_sensor_rht.o
  .rodata.sl_status_print.str1.1
-                0x00035567        0x2 ./gecko_sdk_4.4.4/app/common/util/app_log/app_log.o
+                0x000355cb        0x2 ./gecko_sdk_4.4.4/app/common/util/app_log/app_log.o
  .rodata._app_log_status_string.str1.1
-                0x00035569        0x5 ./gecko_sdk_4.4.4/app/common/util/app_log/app_log.o
- *fill*         0x0003556e        0x2 
- .rodata        0x00035570       0x1c ./gecko_sdk_4.4.4/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
+                0x000355cd        0x5 ./gecko_sdk_4.4.4/app/common/util/app_log/app_log.o
+ *fill*         0x000355d2        0x2 
+ .rodata        0x000355d4       0x1c ./gecko_sdk_4.4.4/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
  .rodata.sl_app_properties
-                0x0003558c       0x50 ./gecko_sdk_4.4.4/platform/bootloader/app_properties/app_properties.o
-                0x0003558c                sl_app_properties
- .rodata        0x000355dc        0x4 ./gecko_sdk_4.4.4/platform/emdrv/dmadrv/src/dmadrv.o
+                0x000355f0       0x50 ./gecko_sdk_4.4.4/platform/bootloader/app_properties/app_properties.o
+                0x000355f0                sl_app_properties
+ .rodata        0x00035640        0x4 ./gecko_sdk_4.4.4/platform/emdrv/dmadrv/src/dmadrv.o
  .rodata.CSWTCH.79
-                0x000355e0        0xa ./gecko_sdk_4.4.4/platform/emlib/src/em_cmu.o
+                0x00035644        0xa ./gecko_sdk_4.4.4/platform/emlib/src/em_cmu.o
  .rodata.CSWTCH.78
-                0x000355ea        0xa ./gecko_sdk_4.4.4/platform/emlib/src/em_cmu.o
+                0x0003564e        0xa ./gecko_sdk_4.4.4/platform/emlib/src/em_cmu.o
  .rodata.CSWTCH.77
-                0x000355f4        0x5 ./gecko_sdk_4.4.4/platform/emlib/src/em_cmu.o
+                0x00035658        0x5 ./gecko_sdk_4.4.4/platform/emlib/src/em_cmu.o
  .rodata.CSWTCH.76
-                0x000355f9        0x5 ./gecko_sdk_4.4.4/platform/emlib/src/em_cmu.o
- *fill*         0x000355fe        0x2 
- .rodata.flashWsTable
-                0x00035600       0x28 ./gecko_sdk_4.4.4/platform/emlib/src/em_cmu.o
- .rodata.i2cNSum
-                0x00035628        0x4 ./gecko_sdk_4.4.4/platform/emlib/src/em_i2c.o
- .rodata.supportedPaIndices
-                0x0003562c        0x7 ./gecko_sdk_4.4.4/platform/radio/rail_lib/plugin/pa-conversions/pa_conversions_efr32.o
- *fill*         0x00035633        0x1 
- .rodata.RAIL_TxPowerCurvesDcdc
-                0x00035634       0x20 ./gecko_sdk_4.4.4/platform/radio/rail_lib/plugin/pa-conversions/pa_curves_efr32.o
-                0x00035634                RAIL_TxPowerCurvesDcdc
- .rodata.RAIL_curves24LpDcdc
-                0x00035654        0xe ./gecko_sdk_4.4.4/platform/radio/rail_lib/plugin/pa-conversions/pa_curves_efr32.o
+                0x0003565d        0x5 ./gecko_sdk_4.4.4/platform/emlib/src/em_cmu.o
  *fill*         0x00035662        0x2 
+ .rodata.flashWsTable
+                0x00035664       0x28 ./gecko_sdk_4.4.4/platform/emlib/src/em_cmu.o
+ .rodata.i2cNSum
+                0x0003568c        0x4 ./gecko_sdk_4.4.4/platform/emlib/src/em_i2c.o
+ .rodata.supportedPaIndices
+                0x00035690        0x7 ./gecko_sdk_4.4.4/platform/radio/rail_lib/plugin/pa-conversions/pa_conversions_efr32.o
+ *fill*         0x00035697        0x1 
+ .rodata.RAIL_TxPowerCurvesDcdc
+                0x00035698       0x20 ./gecko_sdk_4.4.4/platform/radio/rail_lib/plugin/pa-conversions/pa_curves_efr32.o
+                0x00035698                RAIL_TxPowerCurvesDcdc
+ .rodata.RAIL_curves24LpDcdc
+                0x000356b8        0xe ./gecko_sdk_4.4.4/platform/radio/rail_lib/plugin/pa-conversions/pa_curves_efr32.o
+ *fill*         0x000356c6        0x2 
  .rodata.RAIL_piecewiseDataSgDcdc
-                0x00035664       0x44 ./gecko_sdk_4.4.4/platform/radio/rail_lib/plugin/pa-conversions/pa_curves_efr32.o
+                0x000356c8       0x44 ./gecko_sdk_4.4.4/platform/radio/rail_lib/plugin/pa-conversions/pa_curves_efr32.o
  .rodata.RAIL_piecewiseDataHpDcdc
-                0x000356a8       0x44 ./gecko_sdk_4.4.4/platform/radio/rail_lib/plugin/pa-conversions/pa_curves_efr32.o
+                0x0003570c       0x44 ./gecko_sdk_4.4.4/platform/radio/rail_lib/plugin/pa-conversions/pa_curves_efr32.o
  .rodata.crypto_devices
-                0x000356ec       0x10 ./gecko_sdk_4.4.4/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
+                0x00035750       0x10 ./gecko_sdk_4.4.4/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
  .rodata.sli_crypto_transparent_hash_setup.str1.1
-                0x000356fc       0x42 ./gecko_sdk_4.4.4/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_hash.o
+                0x00035760       0x42 ./gecko_sdk_4.4.4/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_hash.o
  .rodata.sha_padding
-                0x0003573e       0x40 ./gecko_sdk_4.4.4/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_hash.o
- *fill*         0x0003577e        0x2 
+                0x000357a2       0x40 ./gecko_sdk_4.4.4/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_hash.o
+ *fill*         0x000357e2        0x2 
  .rodata.cmac_const_rb
-                0x00035780       0x10 ./gecko_sdk_4.4.4/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_mac.o
- .rodata        0x00035790       0x10 ./gecko_sdk_4.4.4/platform/service/device_init/src/sl_device_init_dcdc_s1.o
- .rodata        0x000357a0       0x12 ./gecko_sdk_4.4.4/platform/service/device_init/src/sl_device_init_hfxo_s1.o
- .rodata        0x000357b2        0x4 ./gecko_sdk_4.4.4/platform/service/device_init/src/sl_device_init_lfxo_s1.o
+                0x000357e4       0x10 ./gecko_sdk_4.4.4/platform/security/sl_component/sl_psa_driver/src/sli_crypto_transparent_driver_mac.o
+ .rodata        0x000357f4       0x10 ./gecko_sdk_4.4.4/platform/service/device_init/src/sl_device_init_dcdc_s1.o
+ .rodata        0x00035804       0x12 ./gecko_sdk_4.4.4/platform/service/device_init/src/sl_device_init_hfxo_s1.o
+ .rodata        0x00035816        0x4 ./gecko_sdk_4.4.4/platform/service/device_init/src/sl_device_init_lfxo_s1.o
  .rodata.CSWTCH.57
-                0x000357b6        0x4 ./gecko_sdk_4.4.4/platform/service/power_manager/src/sl_power_manager.o
- .rodata        0x000357ba       0x10 ./gecko_sdk_4.4.4/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
- *fill*         0x000357ca        0x2 
+                0x0003581a        0x4 ./gecko_sdk_4.4.4/platform/service/power_manager/src/sl_power_manager.o
+ .rodata        0x0003581e       0x10 ./gecko_sdk_4.4.4/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
+ *fill*         0x0003582e        0x2 
  .rodata.bt_bgapi_classes
-                0x000357cc       0x24 ./gecko_sdk_4.4.4/protocol/bluetooth/src/sl_bt_stack_init.o
+                0x00035830       0x24 ./gecko_sdk_4.4.4/protocol/bluetooth/src/sl_bt_stack_init.o
  .rodata.bt_used_features
-                0x000357f0       0x48 ./gecko_sdk_4.4.4/protocol/bluetooth/src/sl_bt_stack_init.o
+                0x00035854       0x48 ./gecko_sdk_4.4.4/protocol/bluetooth/src/sl_bt_stack_init.o
  .rodata.bt_config
-                0x00035838       0x28 ./gecko_sdk_4.4.4/protocol/bluetooth/src/sl_bt_stack_init.o
+                0x0003589c       0x28 ./gecko_sdk_4.4.4/protocol/bluetooth/src/sl_bt_stack_init.o
  .rodata.sli_feature_bt_advertiser_config
-                0x00035860        0x1 ./gecko_sdk_4.4.4/protocol/bluetooth/src/sli_bt_advertiser_config.o
-                0x00035860                sli_feature_bt_advertiser_config
- *fill*         0x00035861        0x1 
+                0x000358c4        0x1 ./gecko_sdk_4.4.4/protocol/bluetooth/src/sli_bt_advertiser_config.o
+                0x000358c4                sli_feature_bt_advertiser_config
+ *fill*         0x000358c5        0x1 
  .rodata.sli_feature_bt_connection_config
-                0x00035862        0x4 ./gecko_sdk_4.4.4/protocol/bluetooth/src/sli_bt_connection_config.o
-                0x00035862                sli_feature_bt_connection_config
- *fill*         0x00035866        0x2 
+                0x000358c6        0x4 ./gecko_sdk_4.4.4/protocol/bluetooth/src/sli_bt_connection_config.o
+                0x000358c6                sli_feature_bt_connection_config
+ *fill*         0x000358ca        0x2 
  .rodata.mbedtls_cipher_definitions
-                0x00035868       0x20 ./gecko_sdk_4.4.4/util/third_party/mbedtls/library/cipher_wrap.o
-                0x00035868                mbedtls_cipher_definitions
+                0x000358cc       0x20 ./gecko_sdk_4.4.4/util/third_party/mbedtls/library/cipher_wrap.o
+                0x000358cc                mbedtls_cipher_definitions
  .rodata.str1.1
-                0x00035888       0x24 ./gecko_sdk_4.4.4/util/third_party/mbedtls/library/cipher_wrap.o
+                0x000358ec       0x24 ./gecko_sdk_4.4.4/util/third_party/mbedtls/library/cipher_wrap.o
  .rodata.aes_256_ecb_info
-                0x000358ac        0x8 ./gecko_sdk_4.4.4/util/third_party/mbedtls/library/cipher_wrap.o
+                0x00035910        0x8 ./gecko_sdk_4.4.4/util/third_party/mbedtls/library/cipher_wrap.o
  .rodata.aes_192_ecb_info
-                0x000358b4        0x8 ./gecko_sdk_4.4.4/util/third_party/mbedtls/library/cipher_wrap.o
+                0x00035918        0x8 ./gecko_sdk_4.4.4/util/third_party/mbedtls/library/cipher_wrap.o
  .rodata.aes_128_ecb_info
-                0x000358bc        0x8 ./gecko_sdk_4.4.4/util/third_party/mbedtls/library/cipher_wrap.o
+                0x00035920        0x8 ./gecko_sdk_4.4.4/util/third_party/mbedtls/library/cipher_wrap.o
  .rodata.aes_info
-                0x000358c4       0x18 ./gecko_sdk_4.4.4/util/third_party/mbedtls/library/cipher_wrap.o
+                0x00035928       0x18 ./gecko_sdk_4.4.4/util/third_party/mbedtls/library/cipher_wrap.o
  .rodata.secp256r1_n
-                0x000358dc       0x20 ./gecko_sdk_4.4.4/util/third_party/mbedtls/library/ecp_curves.o
+                0x00035940       0x20 ./gecko_sdk_4.4.4/util/third_party/mbedtls/library/ecp_curves.o
  .rodata.secp256r1_gy
-                0x000358fc       0x20 ./gecko_sdk_4.4.4/util/third_party/mbedtls/library/ecp_curves.o
+                0x00035960       0x20 ./gecko_sdk_4.4.4/util/third_party/mbedtls/library/ecp_curves.o
  .rodata.secp256r1_gx
-                0x0003591c       0x20 ./gecko_sdk_4.4.4/util/third_party/mbedtls/library/ecp_curves.o
+                0x00035980       0x20 ./gecko_sdk_4.4.4/util/third_party/mbedtls/library/ecp_curves.o
  .rodata.secp256r1_b
-                0x0003593c       0x20 ./gecko_sdk_4.4.4/util/third_party/mbedtls/library/ecp_curves.o
+                0x000359a0       0x20 ./gecko_sdk_4.4.4/util/third_party/mbedtls/library/ecp_curves.o
  .rodata.secp256r1_p
-                0x0003595c       0x20 ./gecko_sdk_4.4.4/util/third_party/mbedtls/library/ecp_curves.o
+                0x000359c0       0x20 ./gecko_sdk_4.4.4/util/third_party/mbedtls/library/ecp_curves.o
  .rodata.mbedtls_sha256_info
-                0x0003597c        0x3 ./gecko_sdk_4.4.4/util/third_party/mbedtls/library/md.o
+                0x000359e0        0x3 ./gecko_sdk_4.4.4/util/third_party/mbedtls/library/md.o
  .rodata.mbedtls_sha224_info
-                0x0003597f        0x3 ./gecko_sdk_4.4.4/util/third_party/mbedtls/library/md.o
- .rodata        0x00035982        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/bgstack/ll/lib/libbluetooth_controller_efr32xg12_gcc_release.a(ll_adv.c.obj)
+                0x000359e3        0x3 ./gecko_sdk_4.4.4/util/third_party/mbedtls/library/md.o
+ .rodata        0x000359e6        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/bgstack/ll/lib/libbluetooth_controller_efr32xg12_gcc_release.a(ll_adv.c.obj)
  .rodata.CSWTCH.6
-                0x0003598a        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/bgstack/ll/lib/libbluetooth_controller_efr32xg12_gcc_release.a(ll_hci_phy.c.obj)
+                0x000359ee        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/bgstack/ll/lib/libbluetooth_controller_efr32xg12_gcc_release.a(ll_hci_phy.c.obj)
  .rodata.LLCP_PDU_LENGTHS
-                0x0003598e       0x3a C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/bgstack/ll/lib/libbluetooth_controller_efr32xg12_gcc_release.a(ll_llcp.c.obj)
+                0x000359f2       0x3a C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/bgstack/ll/lib/libbluetooth_controller_efr32xg12_gcc_release.a(ll_llcp.c.obj)
  .rodata.ll_scanTxnReportLegacyPacket.str1.1
-                0x000359c8        0xa C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/bgstack/ll/lib/libbluetooth_controller_efr32xg12_gcc_release.a(ll_scan.c.obj)
+                0x00035a2c        0xa C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/bgstack/ll/lib/libbluetooth_controller_efr32xg12_gcc_release.a(ll_scan.c.obj)
  .rodata.ll_scanPacketTypes
-                0x000359d2        0x9 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/bgstack/ll/lib/libbluetooth_controller_efr32xg12_gcc_release.a(ll_scan.c.obj)
-                0x000359d2                ll_scanPacketTypes
+                0x00035a36        0x9 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/bgstack/ll/lib/libbluetooth_controller_efr32xg12_gcc_release.a(ll_scan.c.obj)
+                0x00035a36                ll_scanPacketTypes
  .rodata.CSWTCH.16
-                0x000359db        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/bgstack/ll/lib/libbluetooth_controller_efr32xg12_gcc_release.a(ll_radio_utils.c.obj)
- *fill*         0x000359df        0x1 
+                0x00035a3f        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/bgstack/ll/lib/libbluetooth_controller_efr32xg12_gcc_release.a(ll_radio_utils.c.obj)
+ *fill*         0x00035a43        0x1 
  .rodata.ll_radioScaToPpm
-                0x000359e0       0x24 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/bgstack/ll/lib/libbluetooth_controller_efr32xg12_gcc_release.a(ll_radio.c.obj)
-                0x000359e0                ll_radioScaToPpm
- .rodata        0x00035a04        0x2 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/bgstack/ll/lib/libbluetooth_controller_efr32xg12_gcc_release.a(ll_radio.c.obj)
+                0x00035a44       0x24 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/bgstack/ll/lib/libbluetooth_controller_efr32xg12_gcc_release.a(ll_radio.c.obj)
+                0x00035a44                ll_radioScaToPpm
+ .rodata        0x00035a68        0x2 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/bgstack/ll/lib/libbluetooth_controller_efr32xg12_gcc_release.a(ll_radio.c.obj)
  .rodata.ll_timing
-                0x00035a06       0x18 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/bgstack/ll/lib/libbluetooth_controller_efr32xg12_gcc_release.a(ll_timing.c.obj)
- *fill*         0x00035a1e        0x2 
+                0x00035a6a       0x18 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/bgstack/ll/lib/libbluetooth_controller_efr32xg12_gcc_release.a(ll_timing.c.obj)
+ *fill*         0x00035a82        0x2 
  .rodata.sli_feature_bt_builtin_bonding_database_init_always
-                0x00035a20        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bondingdb.c.obj)
-                0x00035a20                sli_feature_bt_builtin_bonding_database_init_always
+                0x00035a84        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bondingdb.c.obj)
+                0x00035a84                sli_feature_bt_builtin_bonding_database_init_always
  .rodata.gap_address_type_to_equivalence_class
-                0x00035a28        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(sli_bt_gap_addr.c.obj)
+                0x00035a8c        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(sli_bt_gap_addr.c.obj)
  .rodata.gap_address_type_to_bgapi_gap_address_type
-                0x00035a30        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(sli_bt_gap_addr.c.obj)
+                0x00035a94        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(sli_bt_gap_addr.c.obj)
  .rodata.random_address_type_to_gap_address_type
-                0x00035a38        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(sli_bt_gap_addr.c.obj)
+                0x00035a9c        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(sli_bt_gap_addr.c.obj)
  .rodata.hci_to_gap_address_type
-                0x00035a3c        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(sli_bt_gap_addr.c.obj)
+                0x00035aa0        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(sli_bt_gap_addr.c.obj)
  .rodata.hci_handlers
-                0x00035a40       0x38 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(hci.c.obj)
+                0x00035aa4       0x38 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(hci.c.obj)
  .rodata.state_listeners
-                0x00035a78        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(hci.c.obj)
+                0x00035adc        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(hci.c.obj)
  .rodata.CSWTCH.16
-                0x00035a80        0xb C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(ubt.c.obj)
- *fill*         0x00035a8b        0x1 
+                0x00035ae4        0xb C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(ubt.c.obj)
+ *fill*         0x00035aef        0x1 
  .rodata.sli_bgapi_class_bt_advertiser_optimized
-                0x00035a8c       0x14 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_advertiser.c.obj)
-                0x00035a8c                sli_bgapi_class_bt_advertiser_optimized
+                0x00035af0       0x14 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_advertiser.c.obj)
+                0x00035af0                sli_bgapi_class_bt_advertiser_optimized
  .rodata.sli_feature_bt_advertiser_init_always
-                0x00035aa0        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_advertiser.c.obj)
-                0x00035aa0                sli_feature_bt_advertiser_init_always
+                0x00035b04        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_advertiser.c.obj)
+                0x00035b04                sli_feature_bt_advertiser_init_always
  .rodata.bgapi_event_decl_bt_advertiser_timeout
-                0x00035aa8        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_advertiser.c.obj)
+                0x00035b0c        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_advertiser.c.obj)
  .rodata.sli_bgapi_class_bt_legacy_advertiser_optimized
-                0x00035aac       0x14 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_legacy_advertiser.c.obj)
-                0x00035aac                sli_bgapi_class_bt_legacy_advertiser_optimized
+                0x00035b10       0x14 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_legacy_advertiser.c.obj)
+                0x00035b10                sli_bgapi_class_bt_legacy_advertiser_optimized
  .rodata.sli_bgapi_class_bt_scanner_optimized
-                0x00035ac0       0x14 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_scanner.c.obj)
-                0x00035ac0                sli_bgapi_class_bt_scanner_optimized
+                0x00035b24       0x14 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_scanner.c.obj)
+                0x00035b24                sli_bgapi_class_bt_scanner_optimized
  .rodata.sli_feature_bt_scanner_init_always
-                0x00035ad4        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_scanner.c.obj)
-                0x00035ad4                sli_feature_bt_scanner_init_always
+                0x00035b38        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_scanner.c.obj)
+                0x00035b38                sli_feature_bt_scanner_init_always
  .rodata.sli_feature_bt_scanner_base_init_always
-                0x00035adc        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_scanner_base.c.obj)
-                0x00035adc                sli_feature_bt_scanner_base_init_always
+                0x00035b40        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_scanner_base.c.obj)
+                0x00035b40                sli_feature_bt_scanner_base_init_always
  .rodata.bgapi_event_decl_bt_scanner_legacy_advertisement_report
-                0x00035ae4        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_scanner_base.c.obj)
+                0x00035b48        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_scanner_base.c.obj)
  .rodata.sli_bgapi_class_bt_gatt_server_optimized
-                0x00035ae8       0x14 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_server.c.obj)
-                0x00035ae8                sli_bgapi_class_bt_gatt_server_optimized
+                0x00035b4c       0x14 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_server.c.obj)
+                0x00035b4c                sli_bgapi_class_bt_gatt_server_optimized
  .rodata.sli_bgapi_class_bt_gatt_optimized
-                0x00035afc       0x14 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_client.c.obj)
-                0x00035afc                sli_bgapi_class_bt_gatt_optimized
+                0x00035b60       0x14 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_client.c.obj)
+                0x00035b60                sli_bgapi_class_bt_gatt_optimized
  .rodata.sli_feature_bt_gatt_init_always
-                0x00035b10        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_client.c.obj)
-                0x00035b10                sli_feature_bt_gatt_init_always
+                0x00035b74        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_client.c.obj)
+                0x00035b74                sli_feature_bt_gatt_init_always
  .rodata.sli_bgapi_class_bt_sm_optimized
-                0x00035b18       0x14 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_sm.c.obj)
-                0x00035b18                sli_bgapi_class_bt_sm_optimized
+                0x00035b7c       0x14 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_sm.c.obj)
+                0x00035b7c                sli_bgapi_class_bt_sm_optimized
  .rodata.sli_feature_bt_sm_init_always
-                0x00035b2c        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_sm.c.obj)
-                0x00035b2c                sli_feature_bt_sm_init_always
+                0x00035b90        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_sm.c.obj)
+                0x00035b90                sli_feature_bt_sm_init_always
  .rodata.null_address
-                0x00035b34        0x7 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_system.c.obj)
- *fill*         0x00035b3b        0x1 
+                0x00035b98        0x7 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_system.c.obj)
+ *fill*         0x00035b9f        0x1 
  .rodata.sli_bgapi_class_bt_system_optimized
-                0x00035b3c       0x14 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_system.c.obj)
-                0x00035b3c                sli_bgapi_class_bt_system_optimized
+                0x00035ba0       0x14 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_system.c.obj)
+                0x00035ba0                sli_bgapi_class_bt_system_optimized
  .rodata.sli_feature_bt_system_init_always
-                0x00035b50        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_system.c.obj)
-                0x00035b50                sli_feature_bt_system_init_always
+                0x00035bb4        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_system.c.obj)
+                0x00035bb4                sli_feature_bt_system_init_always
  .rodata.bgapi_event_decl_bt_system_soft_timer
-                0x00035b58        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_system.c.obj)
+                0x00035bbc        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_system.c.obj)
  .rodata.bgapi_event_decl_bt_system_awake
-                0x00035b5c        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_system.c.obj)
+                0x00035bc0        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_system.c.obj)
  .rodata.CSWTCH.49
-                0x00035b60        0x3 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_connection.c.obj)
- *fill*         0x00035b63        0x1 
+                0x00035bc4        0x3 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_connection.c.obj)
+ *fill*         0x00035bc7        0x1 
  .rodata.sli_bgapi_class_bt_connection_optimized
-                0x00035b64       0x14 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_connection.c.obj)
-                0x00035b64                sli_bgapi_class_bt_connection_optimized
+                0x00035bc8       0x14 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_connection.c.obj)
+                0x00035bc8                sli_bgapi_class_bt_connection_optimized
  .rodata.sli_feature_bt_connection_init_always
-                0x00035b78        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_connection.c.obj)
-                0x00035b78                sli_feature_bt_connection_init_always
+                0x00035bdc        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_connection.c.obj)
+                0x00035bdc                sli_feature_bt_connection_init_always
  .rodata.bgapi_event_decl_bt_connection_closed
-                0x00035b80        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_connection.c.obj)
+                0x00035be4        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_connection.c.obj)
  .rodata.bgapi_event_decl_bt_connection_data_length
-                0x00035b84        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_connection.c.obj)
+                0x00035be8        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_connection.c.obj)
  .rodata.bgapi_event_decl_bt_connection_remote_used_features
-                0x00035b88        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_connection.c.obj)
+                0x00035bec        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_connection.c.obj)
  .rodata.bgapi_event_decl_bt_connection_remote_tx_power
-                0x00035b8c        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_connection.c.obj)
+                0x00035bf0        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_connection.c.obj)
  .rodata.bgapi_event_decl_bt_connection_tx_power
-                0x00035b90        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_connection.c.obj)
+                0x00035bf4        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_connection.c.obj)
  .rodata.bgapi_event_decl_bt_connection_get_remote_tx_power_completed
-                0x00035b94        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_connection.c.obj)
+                0x00035bf8        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_connection.c.obj)
  .rodata.bgapi_event_decl_bt_connection_phy_status
-                0x00035b98        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_connection.c.obj)
+                0x00035bfc        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_connection.c.obj)
  .rodata.bgapi_event_decl_bt_connection_set_parameters_failed
-                0x00035b9c        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_connection.c.obj)
+                0x00035c00        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_connection.c.obj)
  .rodata.bgapi_event_decl_bt_connection_parameters
-                0x00035ba0        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_connection.c.obj)
+                0x00035c04        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_connection.c.obj)
  .rodata.bgapi_event_decl_bt_connection_opened
-                0x00035ba4        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_connection.c.obj)
+                0x00035c08        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_connection.c.obj)
  .rodata.CSWTCH.17
-                0x00035ba8        0xe C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_efr32_hal.c.obj)
- *fill*         0x00035bb6        0x2 
+                0x00035c0c        0xe C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_efr32_hal.c.obj)
+ *fill*         0x00035c1a        0x2 
  .rodata.bgapi_event_decl_bt_external_bondingdb_data_ready
-                0x00035bb8        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_efr32_hal.c.obj)
+                0x00035c1c        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_efr32_hal.c.obj)
  .rodata.bgapi_event_decl_bt_external_bondingdb_data
-                0x00035bbc        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_efr32_hal.c.obj)
+                0x00035c20        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_efr32_hal.c.obj)
  .rodata.bgapi_event_decl_bt_external_bondingdb_data_request
-                0x00035bc0        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_efr32_hal.c.obj)
+                0x00035c24        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_efr32_hal.c.obj)
  .rodata.bgapi_event_decl_bt_sm_confirm_bonding
-                0x00035bc4        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_efr32_hal.c.obj)
+                0x00035c28        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_efr32_hal.c.obj)
  .rodata.bgapi_event_decl_bt_sm_bonding_failed
-                0x00035bc8        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_efr32_hal.c.obj)
+                0x00035c2c        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_efr32_hal.c.obj)
  .rodata.bgapi_event_decl_bt_sm_bonded
-                0x00035bcc        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_efr32_hal.c.obj)
+                0x00035c30        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_efr32_hal.c.obj)
  .rodata.bgapi_event_decl_bt_sm_confirm_passkey
-                0x00035bd0        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_efr32_hal.c.obj)
+                0x00035c34        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_efr32_hal.c.obj)
  .rodata.bgapi_event_decl_bt_sm_passkey_request
-                0x00035bd4        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_efr32_hal.c.obj)
+                0x00035c38        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_efr32_hal.c.obj)
  .rodata.bgapi_event_decl_bt_sm_passkey_display
-                0x00035bd8        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_efr32_hal.c.obj)
+                0x00035c3c        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_efr32_hal.c.obj)
  .rodata.bgapi_event_decl_bt_system_external_signal
-                0x00035bdc        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_efr32_hal.c.obj)
+                0x00035c40        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_efr32_hal.c.obj)
  .rodata.bgapi_event_decl_bt_system_resource_exhausted
-                0x00035be0        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_efr32_hal.c.obj)
+                0x00035c44        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_efr32_hal.c.obj)
  .rodata.bgapi_event_decl_bt_system_hardware_error
-                0x00035be4        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_efr32_hal.c.obj)
+                0x00035c48        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_efr32_hal.c.obj)
  .rodata.bgapi_event_decl_bt_system_error
-                0x00035be8        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_efr32_hal.c.obj)
+                0x00035c4c        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_efr32_hal.c.obj)
  .rodata.bgapi_event_decl_bt_system_boot
-                0x00035bec        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_efr32_hal.c.obj)
+                0x00035c50        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_efr32_hal.c.obj)
  .rodata.hci_phy_to_gap_phy
-                0x00035bf0        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_hci_phy_to_gap_phy.c.obj)
+                0x00035c54        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_hci_phy_to_gap_phy.c.obj)
  .rodata.soc_cmd_decl_bt_advertiser_set_timing
-                0x00035bf4        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(sl_bt_class_advertiser.c.obj)
+                0x00035c58        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(sl_bt_class_advertiser.c.obj)
  .rodata.soc_cmd_decl_bt_advertiser_create_set
-                0x00035bfc        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(sl_bt_class_advertiser.c.obj)
+                0x00035c60        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(sl_bt_class_advertiser.c.obj)
  .rodata.soc_cmd_decl_bt_legacy_advertiser_start
-                0x00035c04        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(sl_bt_class_legacy_advertiser.c.obj)
+                0x00035c68        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(sl_bt_class_legacy_advertiser.c.obj)
  .rodata.soc_cmd_decl_bt_legacy_advertiser_generate_data
-                0x00035c0c        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(sl_bt_class_legacy_advertiser.c.obj)
+                0x00035c70        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(sl_bt_class_legacy_advertiser.c.obj)
  .rodata.soc_cmd_decl_bt_connection_close
-                0x00035c14        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(sl_bt_class_connection.c.obj)
+                0x00035c78        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(sl_bt_class_connection.c.obj)
  .rodata.soc_cmd_decl_bt_gatt_server_send_notification
-                0x00035c1c        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(sl_bt_class_gatt_server.c.obj)
+                0x00035c80        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(sl_bt_class_gatt_server.c.obj)
  .rodata.soc_cmd_decl_bt_gatt_server_send_user_write_response
-                0x00035c24        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(sl_bt_class_gatt_server.c.obj)
+                0x00035c88        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(sl_bt_class_gatt_server.c.obj)
  .rodata.soc_cmd_decl_bt_gatt_server_send_user_read_response
-                0x00035c2c        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(sl_bt_class_gatt_server.c.obj)
+                0x00035c90        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(sl_bt_class_gatt_server.c.obj)
  .rodata.soc_cmd_decl_bt_gatt_server_write_attribute_value
-                0x00035c34        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(sl_bt_class_gatt_server.c.obj)
+                0x00035c98        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(sl_bt_class_gatt_server.c.obj)
  .rodata.soc_cmd_decl_bt_system_get_identity_address
-                0x00035c3c        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(sl_bt_class_system.c.obj)
+                0x00035ca0        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(sl_bt_class_system.c.obj)
  .rodata.bgapi_buffer_init.str1.1
-                0x00035c44        0xe C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi.c.obj)
+                0x00035ca8        0xe C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi.c.obj)
  .rodata.CSWTCH.22
-                0x00035c52        0xb C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(acl.c.obj)
- *fill*         0x00035c5d        0x1 
- .rodata        0x00035c5e        0xc C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(gap_adv.c.obj)
+                0x00035cb6        0xb C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(acl.c.obj)
+ *fill*         0x00035cc1        0x1 
+ .rodata        0x00035cc2        0xc C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(gap_adv.c.obj)
  .rodata.gatt_init.str1.1
-                0x00035c6a       0x10 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(gatt.c.obj)
- .rodata        0x00035c7a        0x3 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(gatt_db_minimal.c.obj)
+                0x00035cce       0x10 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(gatt.c.obj)
+ .rodata        0x00035cde        0x3 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(gatt_db_minimal.c.obj)
  .rodata.base_uuid
-                0x00035c7d       0x10 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(gatt_db_dynamic.c.obj)
- *fill*         0x00035c8d        0x3 
+                0x00035ce1       0x10 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(gatt_db_dynamic.c.obj)
+ *fill*         0x00035cf1        0x3 
  .rodata.l2cap_data_fragment_validators
-                0x00035c90       0x10 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(l2cap.c.obj)
+                0x00035cf4       0x10 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(l2cap.c.obj)
  .rodata.smp_generate_ecc_keypair.str1.1
-                0x00035ca0       0x63 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(smp.c.obj)
+                0x00035d04       0x63 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(smp.c.obj)
  .rodata.smp_f5.str1.1
-                0x00035d03       0x11 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(smp.c.obj)
+                0x00035d67       0x11 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(smp.c.obj)
  .rodata.sc_ltk_generation_select
-                0x00035d14       0x19 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(smp.c.obj)
+                0x00035d78       0x19 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(smp.c.obj)
  .rodata.stk_generation_select
-                0x00035d2d       0x19 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(smp.c.obj)
+                0x00035d91       0x19 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(smp.c.obj)
  .rodata.blocked_sample_ltk
-                0x00035d46       0x10 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(smp.c.obj)
+                0x00035daa       0x10 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(smp.c.obj)
  .rodata.sm_debug_public_y
-                0x00035d56       0x20 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(smp.c.obj)
+                0x00035dba       0x20 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(smp.c.obj)
  .rodata.sm_debug_public_x
-                0x00035d76       0x20 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(smp.c.obj)
- *fill*         0x00035d96        0x2 
+                0x00035dda       0x20 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(smp.c.obj)
+ *fill*         0x00035dfa        0x2 
  .rodata.bgapi_event_decl_bt_gatt_server_indication_timeout
-                0x00035d98        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_listener.c.obj)
+                0x00035dfc        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_listener.c.obj)
  .rodata.bgapi_event_decl_bt_gatt_server_execute_write_completed
-                0x00035d9c        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_listener.c.obj)
+                0x00035e00        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_listener.c.obj)
  .rodata.bgapi_event_decl_bt_gatt_server_characteristic_status
-                0x00035da0        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_listener.c.obj)
+                0x00035e04        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_listener.c.obj)
  .rodata.bgapi_event_decl_bt_gatt_server_user_write_request
-                0x00035da4        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_listener.c.obj)
+                0x00035e08        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_listener.c.obj)
  .rodata.bgapi_event_decl_bt_gatt_server_user_read_request
-                0x00035da8        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_listener.c.obj)
+                0x00035e0c        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_listener.c.obj)
  .rodata.bgapi_event_decl_bt_gatt_server_attribute_value
-                0x00035dac        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_listener.c.obj)
+                0x00035e10        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_listener.c.obj)
  .rodata.bgapi_event_decl_bt_gatt_procedure_completed
-                0x00035db0        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_listener.c.obj)
+                0x00035e14        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_listener.c.obj)
  .rodata.bgapi_event_decl_bt_gatt_descriptor_value
-                0x00035db4        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_listener.c.obj)
+                0x00035e18        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_listener.c.obj)
  .rodata.bgapi_event_decl_bt_gatt_characteristic_value
-                0x00035db8        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_listener.c.obj)
+                0x00035e1c        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_listener.c.obj)
  .rodata.bgapi_event_decl_bt_gatt_descriptor
-                0x00035dbc        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_listener.c.obj)
+                0x00035e20        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_listener.c.obj)
  .rodata.bgapi_event_decl_bt_gatt_characteristic
-                0x00035dc0        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_listener.c.obj)
+                0x00035e24        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_listener.c.obj)
  .rodata.bgapi_event_decl_bt_gatt_service
-                0x00035dc4        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_listener.c.obj)
+                0x00035e28        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_listener.c.obj)
  .rodata.bgapi_event_decl_bt_gatt_mtu_exchanged
-                0x00035dc8        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_listener.c.obj)
+                0x00035e2c        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/libbluetooth_host_efr32xg12_gcc_release.a(bgapi_gatt_listener.c.obj)
  .rodata.RAILINT_72b737fcc29d3783ca18acdd920e3520
-                0x00035dcc       0x28 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rail_singleprotocol.o)
+                0x00035e30       0x28 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rail_singleprotocol.o)
  .rodata.RAILINT_3fa0072bb3cc43c5cd58a2d50bf4761c
-                0x00035df4       0x28 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rail_singleprotocol.o)
+                0x00035e58       0x28 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rail_singleprotocol.o)
  .rodata.RAILINT_e05b4c901d5e9d3437581e70ea80c86e
-                0x00035e1c        0xc C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rail_rf.o)
+                0x00035e80        0xc C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rail_rf.o)
  .rodata.RAIL_PaAutoModeConfigDefault
-                0x00035e28       0x18 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(pa_auto_mode.o)
+                0x00035e8c       0x18 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(pa_auto_mode.o)
  .rodata.configureEm1Requirement.str1.1
-                0x00035e40        0x5 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rail_power_manager.o)
- *fill*         0x00035e45        0x3 
+                0x00035ea4        0x5 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rail_power_manager.o)
+ *fill*         0x00035ea9        0x3 
  .rodata.RAILINT_5b3921bc1e51b114035eddb5334f1b7b
-                0x00035e48        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rail_power_manager.o)
+                0x00035eac        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rail_power_manager.o)
  .rodata.RAILINT_6647bd1de91ef88792af4853416c3185
-                0x00035e50        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rail_power_manager.o)
+                0x00035eb4        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rail_power_manager.o)
  .rodata.RAILINT_b8f0218bb86c5520071f355447c2e65a
-                0x00035e58        0xa C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rfhal_pa.o)
+                0x00035ebc        0xa C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rfhal_pa.o)
  .rodata.RAILINT_d3dd13574495c9b1fcdaf482701deee1
-                0x00035e62        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rfhal_radio.o)
- *fill*         0x00035e66        0x2 
+                0x00035ec6        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rfhal_radio.o)
+ *fill*         0x00035eca        0x2 
  .rodata.RAILINT_12bc68fe404c9669cca1a5e2181bab07
-                0x00035e68        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rfhal_timings.o)
+                0x00035ecc        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rfhal_timings.o)
  .rodata.RAILINT_96d85adc4eceaa51cc96878bf8fbe7a3
-                0x00035e70        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rail_rf_hal.o)
+                0x00035ed4        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rail_rf_hal.o)
  .rodata.RAILINT_a6a564bc54f0def31ca127e7736dcf37
-                0x00035e74        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rail_rf_hal.o)
+                0x00035ed8        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rail_rf_hal.o)
  .rodata.RAILINT_6a266044a81eb27cc87c65bb83bb43b9
-                0x00035e78        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rail_rf_hal.o)
+                0x00035edc        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rail_rf_hal.o)
  .rodata.RAILINT_58a7eb109dd3c71655f93e313f54ed2e
-                0x00035e7c        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rail_rf_hal.o)
+                0x00035ee0        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rail_rf_hal.o)
  .rodata.RAILINT_8bbcf4b8d937a321d9096d3770232e66
-                0x00035e84        0xc C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rail_rf_hal.o)
+                0x00035ee8        0xc C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rail_rf_hal.o)
  .rodata.RAILINT_53fd5aa88cfc650adbf1adaee0691724
-                0x00035e90        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rail_ble_rf_hal.o)
+                0x00035ef4        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rail_ble_rf_hal.o)
  .rodata.RAILINT_9d07dc039c08503d9a4b04a0473a0ca1
-                0x00035e98        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(generic_efr32xg12_seq.o)
-                0x00035e98                RAILINT_9d07dc039c08503d9a4b04a0473a0ca1
+                0x00035efc        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(generic_efr32xg12_seq.o)
+                0x00035efc                RAILINT_9d07dc039c08503d9a4b04a0473a0ca1
  .rodata.RAILINT_6c7715fcf8a536bb641f7a33742a842f
-                0x00035e9c     0x1aa0 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(generic_efr32xg12_seq.o)
-                0x00035e9c                RAILINT_6c7715fcf8a536bb641f7a33742a842f
+                0x00035f00     0x1aa0 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(generic_efr32xg12_seq.o)
+                0x00035f00                RAILINT_6c7715fcf8a536bb641f7a33742a842f
  .rodata.RAIL_BLE_Phy2MbpsViterbi
-                0x0003793c        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rfhal_standard_phys.o)
-                0x0003793c                RAIL_BLE_Phy2MbpsViterbi
+                0x000379a0        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rfhal_standard_phys.o)
+                0x000379a0                RAIL_BLE_Phy2MbpsViterbi
  .rodata.RAIL_BLE_Phy1MbpsViterbi
-                0x00037940        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rfhal_standard_phys.o)
-                0x00037940                RAIL_BLE_Phy1MbpsViterbi
+                0x000379a4        0x4 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(rfhal_standard_phys.o)
+                0x000379a4                RAIL_BLE_Phy1MbpsViterbi
  .rodata.RAILINT_80d2b24df19fec547bb88750e9132804
-                0x00037944       0x18 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(ble_efr32xg12_configurator_out.o)
-                0x00037944                RAILINT_80d2b24df19fec547bb88750e9132804
+                0x000379a8       0x18 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(ble_efr32xg12_configurator_out.o)
+                0x000379a8                RAILINT_80d2b24df19fec547bb88750e9132804
  .rodata.RAILINT_8a0971c70143abd094f9e95054a5e551
-                0x0003795c       0x18 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(ble_efr32xg12_configurator_out.o)
-                0x0003795c                RAILINT_8a0971c70143abd094f9e95054a5e551
+                0x000379c0       0x18 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(ble_efr32xg12_configurator_out.o)
+                0x000379c0                RAILINT_8a0971c70143abd094f9e95054a5e551
  .rodata.RAILINT_e186f6f50c32f6c11894af60ac43aa6e
-                0x00037974       0xd8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(ble_efr32xg12_configurator_out.o)
-                0x00037974                RAILINT_e186f6f50c32f6c11894af60ac43aa6e
+                0x000379d8       0xd8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(ble_efr32xg12_configurator_out.o)
+                0x000379d8                RAILINT_e186f6f50c32f6c11894af60ac43aa6e
  .rodata.RAILINT_4799455d02eab9224d7bda2beadac25c
-                0x00037a4c       0x90 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(ble_efr32xg12_configurator_out.o)
-                0x00037a4c                RAILINT_4799455d02eab9224d7bda2beadac25c
+                0x00037ab0       0x90 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(ble_efr32xg12_configurator_out.o)
+                0x00037ab0                RAILINT_4799455d02eab9224d7bda2beadac25c
  .rodata.RAILINT_344211b796d3b82f1e0c2892aa6e425a
-                0x00037adc       0xe8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(ble_efr32xg12_configurator_out.o)
-                0x00037adc                RAILINT_344211b796d3b82f1e0c2892aa6e425a
+                0x00037b40       0xe8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(ble_efr32xg12_configurator_out.o)
+                0x00037b40                RAILINT_344211b796d3b82f1e0c2892aa6e425a
  .rodata.RAILINT_8ae4a1a91f20b0ee3f0456210ff158d8
-                0x00037bc4       0xe8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(ble_efr32xg12_configurator_out.o)
-                0x00037bc4                RAILINT_8ae4a1a91f20b0ee3f0456210ff158d8
+                0x00037c28       0xe8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(ble_efr32xg12_configurator_out.o)
+                0x00037c28                RAILINT_8ae4a1a91f20b0ee3f0456210ff158d8
  .rodata.RAILINT_83fc254eda330d3231363827ee18770e
-                0x00037cac      0x148 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(ble_efr32xg12_configurator_out.o)
-                0x00037cac                RAILINT_83fc254eda330d3231363827ee18770e
+                0x00037d10      0x148 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(ble_efr32xg12_configurator_out.o)
+                0x00037d10                RAILINT_83fc254eda330d3231363827ee18770e
  .rodata.RAILINT_7de33d1fbdf07ea4cd0d86f9fcae4351
-                0x00037df4       0x4c C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(ble_efr32xg12_configurator_out.o)
+                0x00037e58       0x4c C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(ble_efr32xg12_configurator_out.o)
  .rodata.RAILINT_53c72a3f404f787f84087d43373eb546
-                0x00037e40       0x4c C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(ble_efr32xg12_configurator_out.o)
+                0x00037ea4       0x4c C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(ble_efr32xg12_configurator_out.o)
  .rodata.RAILINT_8fc54f2f30af1158ece245eed6e90ea4
-                0x00037e8c        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(ble_efr32xg12_configurator_out.o)
+                0x00037ef0        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(ble_efr32xg12_configurator_out.o)
  .rodata.RAILINT_f5746fc0442ecddc6deb7e21281ff427
-                0x00037e94        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(ble_efr32xg12_configurator_out.o)
+                0x00037ef8        0x8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(ble_efr32xg12_configurator_out.o)
  .rodata.RAILINT_adc4b242e67ed46975dd24dd00c14b5e
-                0x00037e9c       0x1a C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(ble_efr32xg12_configurator_out.o)
+                0x00037f00       0x1a C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg12_gcc_release.a(ble_efr32xg12_configurator_out.o)
  .rodata._vfprintf_r.str1.1
-                0x00037eb6       0x11 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/12.2.rel1_2023.7/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/softfp\libc_nano.a(libc_a-nano-vfprintf.o)
+                0x00037f1a       0x11 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/12.2.rel1_2023.7/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/softfp\libc_nano.a(libc_a-nano-vfprintf.o)
  .rodata._printf_i.str1.1
-                0x00037ec7       0x22 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/12.2.rel1_2023.7/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/softfp\libc_nano.a(libc_a-nano-vfprintf_i.o)
+                0x00037f2b       0x22 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/12.2.rel1_2023.7/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/softfp\libc_nano.a(libc_a-nano-vfprintf_i.o)
  .rodata.bg_message_init.str1.1
-                0x00037ee9       0x15 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/bgcommon/lib/libbgcommon_efr32xg12_gcc_release.a(bg_message.c.obj)
+                0x00037f4d       0x15 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/bgcommon/lib/libbgcommon_efr32xg12_gcc_release.a(bg_message.c.obj)
  .rodata.str1.1
-                0x00037efe       0xe8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/bgcommon/lib/libbgcommon_efr32xg12_gcc_release.a(bg_pool.c.obj)
- *fill*         0x00037fe6        0x2 
+                0x00037f62       0xe8 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/bgcommon/lib/libbgcommon_efr32xg12_gcc_release.a(bg_pool.c.obj)
+ *fill*         0x0003804a        0x2 
  .rodata.bg_pool_description
-                0x00037fe8       0x44 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/bgcommon/lib/libbgcommon_efr32xg12_gcc_release.a(bg_pool.c.obj)
+                0x0003804c       0x44 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/bgcommon/lib/libbgcommon_efr32xg12_gcc_release.a(bg_pool.c.obj)
  .rodata.bgbuf_init.str1.1
-                0x0003802c       0x20 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/bgcommon/lib/libbgcommon_efr32xg12_gcc_release.a(bgbuf.c.obj)
+                0x00038090       0x20 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/bgcommon/lib/libbgcommon_efr32xg12_gcc_release.a(bgbuf.c.obj)
  .rodata.bg_malloc_init.str1.1
-                0x0003804c        0xa C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/bgcommon/lib/libbgcommon_efr32xg12_gcc_release.a(bg_malloc_sl.c.obj)
+                0x000380b0        0xa C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/bgcommon/lib/libbgcommon_efr32xg12_gcc_release.a(bg_malloc_sl.c.obj)
  .rodata.bg_random_init.str1.1
-                0x00038056        0xe C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/bgcommon/lib/libbgcommon_efr32xg12_gcc_release.a(bg_random_aes.c.obj)
+                0x000380ba        0xe C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/bgcommon/lib/libbgcommon_efr32xg12_gcc_release.a(bg_random_aes.c.obj)
  *(.eh_frame*)
- .eh_frame      0x00038064        0x0 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/12.2.rel1_2023.7/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/softfp/crtbegin.o
+ .eh_frame      0x000380c8        0x0 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/12.2.rel1_2023.7/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/softfp/crtbegin.o
 
-.glue_7         0x00038064        0x0
- .glue_7        0x00038064        0x0 linker stubs
+.glue_7         0x000380c8        0x0
+ .glue_7        0x000380c8        0x0 linker stubs
 
-.glue_7t        0x00038064        0x0
- .glue_7t       0x00038064        0x0 linker stubs
+.glue_7t        0x000380c8        0x0
+ .glue_7t       0x000380c8        0x0 linker stubs
 
-.vfp11_veneer   0x00038064        0x0
- .vfp11_veneer  0x00038064        0x0 linker stubs
+.vfp11_veneer   0x000380c8        0x0
+ .vfp11_veneer  0x000380c8        0x0 linker stubs
 
-.v4_bx          0x00038064        0x0
- .v4_bx         0x00038064        0x0 linker stubs
+.v4_bx          0x000380c8        0x0
+ .v4_bx         0x000380c8        0x0 linker stubs
 
-.iplt           0x00038064        0x0
- .iplt          0x00038064        0x0 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/12.2.rel1_2023.7/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/softfp/crtbegin.o
+.iplt           0x000380c8        0x0
+ .iplt          0x000380c8        0x0 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/12.2.rel1_2023.7/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/softfp/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x00038064                __exidx_start = .
+                0x000380c8                __exidx_start = .
 
-.ARM.exidx      0x00038064        0x8
+.ARM.exidx      0x000380c8        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x00038064        0x8 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/12.2.rel1_2023.7/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/softfp/crt0.o
+ .ARM.exidx     0x000380c8        0x8 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/12.2.rel1_2023.7/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/softfp/crt0.o
                                  0x10 (size before relaxing)
  .ARM.exidx.text.__udivmoddi4
-                0x0003806c        0x0 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/12.2.rel1_2023.7/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/softfp\libgcc.a(_udivmoddi4.o)
+                0x000380d0        0x0 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/12.2.rel1_2023.7/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/softfp\libgcc.a(_udivmoddi4.o)
                                   0x8 (size before relaxing)
-                0x0003806c                __exidx_end = .
+                0x000380d0                __exidx_end = .
 
-.rel.dyn        0x0003806c        0x0
- .rel.iplt      0x0003806c        0x0 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/12.2.rel1_2023.7/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/softfp/crtbegin.o
+.rel.dyn        0x000380d0        0x0
+ .rel.iplt      0x000380d0        0x0 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/12.2.rel1_2023.7/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/softfp/crtbegin.o
 
-.copy.table     0x0003806c        0xc
-                0x0003806c                . = ALIGN (0x4)
-                0x0003806c                __copy_table_start__ = .
-                0x0003806c        0x4 LONG 0x38078 __etext
-                0x00038070        0x4 LONG 0x20000ac0 __data_start__
-                0x00038074        0x4 LONG 0x9a ((__data_end__ - __data_start__) / 0x4)
-                0x00038078                __copy_table_end__ = .
+.copy.table     0x000380d0        0xc
+                0x000380d0                . = ALIGN (0x4)
+                0x000380d0                __copy_table_start__ = .
+                0x000380d0        0x4 LONG 0x380dc __etext
+                0x000380d4        0x4 LONG 0x20000ac0 __data_start__
+                0x000380d8        0x4 LONG 0x9a ((__data_end__ - __data_start__) / 0x4)
+                0x000380dc                __copy_table_end__ = .
 
-.zero.table     0x00038078        0x0
-                0x00038078                . = ALIGN (0x4)
-                0x00038078                __zero_table_start__ = .
-                0x00038078                __zero_table_end__ = .
-                0x00038078                __etext = .
+.zero.table     0x000380dc        0x0
+                0x000380dc                . = ALIGN (0x4)
+                0x000380dc                __zero_table_start__ = .
+                0x000380dc                __zero_table_end__ = .
+                0x000380dc                __etext = .
                 0x20000000                . = ORIGIN (RAM)
 
 .stack          0x20000000      0xac0
@@ -21330,7 +21420,7 @@ LOAD c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/12.2.rel1_2
 .noinit
  *(.noinit*)
 
-.data           0x20000ac0      0x268 load address 0x00038078
+.data           0x20000ac0      0x268 load address 0x000380dc
                 0x20000ac0                . = ALIGN (0x4)
                 0x20000ac0                __data_start__ = .
  *(vtable)
@@ -21537,16 +21627,16 @@ LOAD c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/12.2.rel1_2
                 0x20000d28                __data_end__ = .
 
 .tm_clone_table
-                0x20000d28        0x0 load address 0x000382e0
+                0x20000d28        0x0 load address 0x00038344
  .tm_clone_table
                 0x20000d28        0x0 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/12.2.rel1_2023.7/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/softfp/crtbegin.o
  .tm_clone_table
                 0x20000d28        0x0 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/12.2.rel1_2023.7/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/softfp/crtend.o
 
-.igot.plt       0x20000d28        0x0 load address 0x000382e0
+.igot.plt       0x20000d28        0x0 load address 0x00038344
  .igot.plt      0x20000d28        0x0 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/12.2.rel1_2023.7/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/softfp/crtbegin.o
 
-.bss            0x20000d28     0x1310 load address 0x000382e0
+.bss            0x20000d28     0x1310 load address 0x00038344
                 0x20000d28                . = ALIGN (0x4)
                 0x20000d28                __bss_start__ = .
  *(SORT_BY_ALIGNMENT(.bss*))
@@ -22130,11 +22220,11 @@ LOAD c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/12.2.rel1_2
                 0x20002038                __bss_end__ = .
                 0x20002038                __ramfuncs_start__ = .
                 0x20002038                __vma_ramfuncs_start__ = .
-                0x000382e0                __lma_ramfuncs_start__ = (__etext + SIZEOF (.data))
+                0x00038344                __lma_ramfuncs_start__ = (__etext + SIZEOF (.data))
                 0x00000000                __text_application_ram_offset__ = (. - __vma_ramfuncs_start__)
 
 text_application_ram
-                0x20002038        0x0 load address 0x000382e0
+                0x20002038        0x0 load address 0x00038344
                 0x20002038                . = ALIGN (0x4)
                 0x20002038                __text_application_ram_start__ = .
  *(text_application_ram)
@@ -22142,7 +22232,7 @@ text_application_ram
                 0x20002038                __text_application_ram_end__ = .
                 0x20002038                . = ALIGN (0x4)
                 0x20002038                __vma_ramfuncs_end__ = .
-                0x000382e0                __lma_ramfuncs_end__ = ((__lma_ramfuncs_start__ + __text_application_ram_offset__) + SIZEOF (text_application_ram))
+                0x00038344                __lma_ramfuncs_end__ = ((__lma_ramfuncs_start__ + __text_application_ram_offset__) + SIZEOF (text_application_ram))
                 0x20002038                __ramfuncs_end__ = .
 
 .heap           0x20002038     0x23f0
@@ -22160,10 +22250,10 @@ text_application_ram
 .internal_storage
  *(.internal_storage*)
 
-.nvm            0x00038078     0x1000
+.nvm            0x000380dc     0x1000
  *(.simee*)
- .simee         0x00038078     0x1000 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/EFR32XG12/GCC/libpsstore.a(store.c.obj)
-                0x00038078                nvm3Storage
+ .simee         0x000380dc     0x1000 C:/Users/arthu/SimplicityStudio/SDKs/gecko_sdk//protocol/bluetooth/lib/EFR32XG12/GCC/libpsstore.a(store.c.obj)
+                0x000380dc                nvm3Storage
                 0x00100000                linker_nvm_end = __main_flash_end__
                 0x000ff000                linker_nvm_begin = (linker_nvm_end - SIZEOF (.nvm))
                 0x00001000                linker_nvm_size = SIZEOF (.nvm)

@@ -49,6 +49,7 @@ component:
   id: iostream_usart
 - {id: mpu}
 - {id: rail_util_pti}
+- {id: sensor_light}
 - {id: sensor_rht}
 - instance: [led0]
   id: simple_led

@@ -691,6 +691,16 @@
 			<locationURI>STUDIO_SDK_LOC/app/bluetooth/common/in_place_ota_dfu/sl_bt_in_place_ota_dfu.h</locationURI>
 		</link>
 		<link>
+			<name>gecko_sdk_4.4.4/app/bluetooth/common/sensor_light/sl_sensor_light.c</name>
+			<type>1</type>
+			<locationURI>STUDIO_SDK_LOC/app/bluetooth/common/sensor_light/sl_sensor_light.c</locationURI>
+		</link>
+		<link>
+			<name>gecko_sdk_4.4.4/app/bluetooth/common/sensor_light/sl_sensor_light.h</name>
+			<type>1</type>
+			<locationURI>STUDIO_SDK_LOC/app/bluetooth/common/sensor_light/sl_sensor_light.h</locationURI>
+		</link>
+		<link>
 			<name>gecko_sdk_4.4.4/app/bluetooth/common/sensor_rht/sl_sensor_rht.c</name>
 			<type>1</type>
 			<locationURI>STUDIO_SDK_LOC/app/bluetooth/common/sensor_rht/sl_sensor_rht.c</locationURI>
@@ -759,6 +769,16 @@
 			<name>gecko_sdk_4.4.4/hardware/driver/configuration_over_swo/src/sl_cos.c</name>
 			<type>1</type>
 			<locationURI>STUDIO_SDK_LOC/hardware/driver/configuration_over_swo/src/sl_cos.c</locationURI>
+		</link>
+		<link>
+			<name>gecko_sdk_4.4.4/hardware/driver/si1133/inc/sl_si1133.h</name>
+			<type>1</type>
+			<locationURI>STUDIO_SDK_LOC/hardware/driver/si1133/inc/sl_si1133.h</locationURI>
+		</link>
+		<link>
+			<name>gecko_sdk_4.4.4/hardware/driver/si1133/src/sl_si1133.c</name>
+			<type>1</type>
+			<locationURI>STUDIO_SDK_LOC/hardware/driver/si1133/src/sl_si1133.c</locationURI>
 		</link>
 		<link>
 			<name>gecko_sdk_4.4.4/hardware/driver/si70xx/inc/sl_si70xx.h</name>

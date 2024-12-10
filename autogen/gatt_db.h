@@ -23,10 +23,12 @@ extern const sli_bt_gattdb_t gattdb;
 #define gattdb_env_sensing                    25
 #define gattdb_temperature                    27
 #define gattdb_measurement_interval           30
-#define gattdb_automation_io                  31
-#define gattdb_digital                        33
-#define gattdb_ota                            34
-#define gattdb_ota_control                    36
+#define gattdb_humidity_0                     32
+#define gattdb_irradiance_0                   35
+#define gattdb_automation_io                  37
+#define gattdb_digital                        39
+#define gattdb_ota                            40
+#define gattdb_ota_control                    42
 
 
 #endif // __GATT_DB_H

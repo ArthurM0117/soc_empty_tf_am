@@ -478,6 +478,10 @@
             <file name="sl_bt_in_place_ota_dfu.c" uri="studio:/sdk/app/bluetooth/common/in_place_ota_dfu/sl_bt_in_place_ota_dfu.c"/>
             <file name="sl_bt_in_place_ota_dfu.h" uri="studio:/sdk/app/bluetooth/common/in_place_ota_dfu/sl_bt_in_place_ota_dfu.h"/>
           </folder>
+          <folder name="sensor_light">
+            <file name="sl_sensor_light.c" uri="studio:/sdk/app/bluetooth/common/sensor_light/sl_sensor_light.c"/>
+            <file name="sl_sensor_light.h" uri="studio:/sdk/app/bluetooth/common/sensor_light/sl_sensor_light.h"/>
+          </folder>
           <folder name="sensor_rht">
             <file name="sl_sensor_rht.c" uri="studio:/sdk/app/bluetooth/common/sensor_rht/sl_sensor_rht.c"/>
             <file name="sl_sensor_rht.h" uri="studio:/sdk/app/bluetooth/common/sensor_rht/sl_sensor_rht.h"/>
@@ -593,6 +597,14 @@
             <folder name="sl_mx25_flash_shutdown_usart">
               <file name="sl_mx25_flash_shutdown.h" uri="studio:/sdk/hardware/driver/mx25_flash_shutdown/inc/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.h"/>
             </folder>
+          </folder>
+        </folder>
+        <folder name="si1133">
+          <folder name="src">
+            <file name="sl_si1133.c" uri="studio:/sdk/hardware/driver/si1133/src/sl_si1133.c"/>
+          </folder>
+          <folder name="inc">
+            <file name="sl_si1133.h" uri="studio:/sdk/hardware/driver/si1133/inc/sl_si1133.h"/>
           </folder>
         </folder>
         <folder name="si70xx">
@@ -831,8 +843,10 @@
   <includePath uri="studio:/sdk/platform/radio/rail_lib/plugin/pa-conversions/efr32xg1x"/>
   <includePath uri="studio:/sdk/platform/radio/rail_lib/plugin/rail_util_power_manager_init"/>
   <includePath uri="studio:/sdk/platform/radio/rail_lib/plugin/rail_util_pti"/>
+  <includePath uri="studio:/sdk/app/bluetooth/common/sensor_light"/>
   <includePath uri="studio:/sdk/app/bluetooth/common/sensor_rht"/>
   <includePath uri="studio:/sdk/app/bluetooth/common/sensor_select"/>
+  <includePath uri="studio:/sdk/hardware/driver/si1133/inc"/>
   <includePath uri="studio:/sdk/hardware/driver/si70xx/inc"/>
   <includePath uri="studio:/sdk/util/silicon_labs/silabs_core/memory_manager"/>
   <includePath uri="studio:/sdk/platform/common/toolchain/inc"/>

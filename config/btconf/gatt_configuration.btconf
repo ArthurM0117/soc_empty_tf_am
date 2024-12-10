@@ -101,6 +101,24 @@ Summary:
         <write authenticated="false" bonded="false" encrypted="false"/>
       </properties>
     </characteristic>
+
+    <!--Humidity-->
+    <characteristic const="false" id="humidity_0" name="Humidity" sourceId="org.bluetooth.characteristic.humidity" uuid="2A6F">
+      <value length="2" type="user" variable_length="false"/>
+      <properties>
+        <read authenticated="false" bonded="false" encrypted="false"/>
+        <notify authenticated="false" bonded="false" encrypted="false"/>
+      </properties>
+    </characteristic>
+
+    <!--Irradiance-->
+    <characteristic const="false" id="irradiance_0" name="Irradiance" sourceId="org.bluetooth.characteristic.irradiance" uuid="2A77">
+      <value length="2" type="user" variable_length="false"/>
+      <properties>
+        <read authenticated="false" bonded="false" encrypted="false"/>
+        <notify authenticated="false" bonded="false" encrypted="false"/>
+      </properties>
+    </characteristic>
   </service>
 
   <!--Automation IO-->

@@ -19,6 +19,7 @@ SUBDIRS := \
 . \
 autogen \
 gecko_sdk_4.4.4/app/bluetooth/common/in_place_ota_dfu \
+gecko_sdk_4.4.4/app/bluetooth/common/sensor_light \
 gecko_sdk_4.4.4/app/bluetooth/common/sensor_rht \
 gecko_sdk_4.4.4/app/bluetooth/common/sensor_select \
 gecko_sdk_4.4.4/app/common/util/app_log \
@@ -26,6 +27,7 @@ gecko_sdk_4.4.4/app/common/util/app_timer \
 gecko_sdk_4.4.4/hardware/board/src \
 gecko_sdk_4.4.4/hardware/driver/configuration_over_swo/src \
 gecko_sdk_4.4.4/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart \
+gecko_sdk_4.4.4/hardware/driver/si1133/src \
 gecko_sdk_4.4.4/hardware/driver/si70xx/src \
 gecko_sdk_4.4.4/platform/Device/SiliconLabs/EFR32MG12P/Source \
 gecko_sdk_4.4.4/platform/bootloader/api \
